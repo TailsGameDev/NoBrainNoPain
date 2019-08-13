@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CabeçaRolando : MonoBehaviour
 {
-    bool podePular;
+    [SerializeField] bool podePular;
     Rigidbody2D corpo;
     public float speed = 5,horiDirect,VerDirect, forcaPulo;
 
@@ -21,7 +21,7 @@ public class CabeçaRolando : MonoBehaviour
         horiDirect = Input.GetAxis("Horizontal");
 
         corpo.velocity = new Vector2(horiDirect * speed , corpo.velocity.y);
-        if (Input.GetKeyDown(KeyCode.Space) && podePular == false) 
+        if (Input.GetKeyDown(KeyCode.Space) && podePular) 
         {
             corpo.velocity = new Vector2(corpo.velocity.x , forcaPulo);
             podePular = false;
