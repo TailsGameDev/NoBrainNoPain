@@ -122,9 +122,9 @@ GameObject:
   m_Component:
   - component: {fileID: 298529137}
   - component: {fileID: 298529136}
-  - component: {fileID: 298529135}
   - component: {fileID: 298529134}
   - component: {fileID: 298529133}
+  - component: {fileID: 298529135}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -191,6 +191,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2f4ce20c3b8f5c4cb9da2189036e0e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  podePular: 1
+  speed: 5
+  horiDirect: 0
+  VerDirect: 0
+  forcaPulo: 6
 --- !u!212 &298529136
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -474,31 +479,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53e29bd8ddcfe8a4bbe1aaa5aa1ff54e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 0}
-  posi: {fileID: 0}

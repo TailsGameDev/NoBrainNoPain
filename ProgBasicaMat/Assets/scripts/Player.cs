@@ -4,34 +4,43 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    Rigidbody2D  RB2D;
-    bool podepular;
+    [SerializeField] bool podePular;
+    Rigidbody2D corpo;
+    public float speed = 5, horiDirect, VerDirect, forcaPulo;
 
-
+    // Start is called before the first frame update
     void Start()
     {
-        RB2D = GetComponent<Rigidbody2D>();
+        corpo = gameObject.GetComponent<Rigidbody2D>();
     }
 
+    // Update is called once per frame
     void Update()
     {
-        move();
+
+        horiDirect = Input.GetAxis("Horizontal");
+
+        corpo.velocity = new Vector2(horiDirect * speed, corpo.velocity.y);
+        if (Input.GetKeyDown(KeyCode.W) && podePular)
+        {
+            corpo.velocity = new Vector2(corpo.velocity.x, forcaPulo);
+            podePular = false;
+
+        }
     }
 
-    public void move()
+    private void OnCollisionStay2D(Collision2D coll)
     {
-        bool a = Input.GetKey("a");
-        bool d = Input.GetKey("d");
-
-        if (a)
+        if (coll.gameObject.tag == "chao")
         {
-            RB2D.velocity = new Vector2(-5, 0);
+            podePular = true;
         }
-
-        if (d)
+    }
+    private void OnCollisionExit2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "chao")
         {
-            RB2D.velocity = new Vector2(+5, 0);
+            podePular = false;
         }
-        
     }
 }
