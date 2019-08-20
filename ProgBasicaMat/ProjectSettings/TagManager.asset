@@ -44,3 +44,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: tilemapFundo
+    uniqueID: 2747842169
+    locked: 0
+  - name: tileMapChaoComGrama
+    uniqueID: 179222343
+    locked: 0
