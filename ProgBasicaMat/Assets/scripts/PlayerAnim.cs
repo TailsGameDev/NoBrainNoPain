@@ -18,7 +18,7 @@ public class PlayerAnim : MonoBehaviour
     {
         float h = Input.GetAxis("Horizontal");
 
-        animator.SetFloat("HorizontalAxis", h);
+        animator.SetFloat(" ", h);
 
         if (h > 0.1)
         {
@@ -29,6 +29,11 @@ public class PlayerAnim : MonoBehaviour
         {
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
+
+        
+     
+     
+        
     }
-    
+
 }
