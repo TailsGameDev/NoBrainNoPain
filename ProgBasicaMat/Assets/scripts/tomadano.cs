@@ -28,6 +28,11 @@ public class tomadano : MonoBehaviour
 	}
 	
 	protected virtual void AoMorrer(){
-		Destroy(gameObject);
+        Morte m = GetComponent<Morte>();
+        if (m != null)
+        {
+            Morte.Morre();
+        }
+        Destroy(gameObject);
 	}
 }

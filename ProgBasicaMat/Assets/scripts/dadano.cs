@@ -5,7 +5,12 @@ using UnityEngine;
 public class dadano : MonoBehaviour
 {
     public float dano;
-    
+    public bool destroiseAoDarDano;
+
+    void OnCollisionEnter2D(Collision2D col) {
+        OnTriggerEnter2D(col.collider);
+    }
+
 	protected void OnTriggerEnter2D(Collider2D col){
 		tomadano t = col.GetComponent<tomadano>();
 		
@@ -16,6 +21,9 @@ public class dadano : MonoBehaviour
 	
 	protected virtual void AoDarDano(tomadano t){
 		t.SomaAVida(-dano);
-		Destroy(gameObject);
+        if (destroiseAoDarDano)
+        {
+            Destroy(gameObject);
+        }
 	}
 }
