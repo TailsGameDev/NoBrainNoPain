@@ -7,7 +7,7 @@ public class vida : MonoBehaviour{
 	public float VidaDoPersonagem;
 	//public Texture Sangue,Contorno;
 	public Image sangue;
-	public int VidaCheia = 100;
+	public float VidaCheia = 100;
 	float larguraSangueOriginal;
 	void Start (){
 		VidaDoPersonagem = VidaCheia;
