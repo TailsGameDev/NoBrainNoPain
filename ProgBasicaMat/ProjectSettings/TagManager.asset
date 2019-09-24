@@ -9,6 +9,7 @@ TagManager:
   - Bala
   - platform
   - Checkpoint
+  - cerebro
   layers:
   - Default
   - TransparentFX
