@@ -2,25 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Essa classe estah meio que fazendo uma função de ataque Ranged para o Player.
+// Talvez possa ser usada no futuro para fazer ataque de inimigos também.
 public class Ataque : MonoBehaviour
 {
-    public GameObject Square;
-    private float i;
-    //class PosicionaPlayer;
-    public GameObject Boca;
-    // Start is called before the first frame update
-    void Start()
-    {
-        GameObject vomito = Instantiate(Square, Boca.transform.position, Quaternion.identity);
-        //vomito.transform.position = Bo
-        //Transform.<PosicionaPlayer>;
-       
-    }
+    public GameObject Vomito; //o vomito em si, que por si soh jah se move.
+    public GameObject Boca; //spawn point do vomito
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-
+    private void Update () {
+        if (Input.GetKeyDown("v")) {
+            GameObject vomito = Instantiate(Vomito, Boca.transform.position, Boca.transform.rotation);
+        }
     }
 }

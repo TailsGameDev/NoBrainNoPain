@@ -330,7 +330,7 @@ PrefabInstance:
     - target: {fileID: 5055240624158151670, guid: 67ca4a3f32ef5704bb7886638ecd91a7,
         type: 3}
       propertyPath: m_Name
-      value: Player
+      value: CabecaPlayer
       objectReference: {fileID: 0}
     - target: {fileID: 5055240624158151659, guid: 67ca4a3f32ef5704bb7886638ecd91a7,
         type: 3}

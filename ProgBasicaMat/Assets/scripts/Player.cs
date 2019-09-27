@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] bool podePular;
+    public bool podePular;
     Rigidbody2D corpo;
     public float speed = 5, horiDirect, VerDirect, forcaPulo;
 
@@ -29,18 +29,4 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay2D(Collision2D coll)
-    {
-        if (coll.gameObject.tag == "chao")
-        {
-            podePular = true;
-        }
-    }
-    private void OnCollisionExit2D(Collision2D coll)
-    {
-        if (coll.gameObject.tag == "chao")
-        {
-            podePular = false;
-        }
-    }
 }

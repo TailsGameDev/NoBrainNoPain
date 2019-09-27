@@ -5,12 +5,16 @@ using UnityEngine;
 public class PlayerAnim : MonoBehaviour
 {
     Animator animator;
+    public Transform objParaGirar;
 
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        if (objParaGirar == null) {
+            objParaGirar = transform.parent;
+        }
     }
 
     // Update is called once per frame
@@ -18,21 +22,17 @@ public class PlayerAnim : MonoBehaviour
     {
         float h = Input.GetAxis("Horizontal");
 
-        animator.SetFloat(" ", h);
+        animator.SetFloat("HorizontalAxis", h);
 
         if (h > 0.1)
         {
-            transform.eulerAngles = new Vector3(0, 0, 0);
+            objParaGirar.eulerAngles = new Vector3(0, 0, 0);
         }
 
         if (h < -0.1)
         {
-            transform.eulerAngles = new Vector3(0, 180, 0);
+            objParaGirar.eulerAngles = new Vector3(0, 180, 0);
         }
-
-        
-     
-     
         
     }
 

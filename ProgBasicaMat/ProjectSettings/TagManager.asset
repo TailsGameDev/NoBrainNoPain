@@ -10,6 +10,8 @@ TagManager:
   - platform
   - Checkpoint
   - cerebro
+  - cerebroHUD
+  - barraDeVida
   layers:
   - Default
   - TransparentFX
@@ -58,4 +60,13 @@ TagManager:
     locked: 0
   - name: tilemapExtra
     uniqueID: 4083438187
+    locked: 0
+  - name: armadilhas
+    uniqueID: 83515197
+    locked: 0
+  - name: plataformaNaoTile
+    uniqueID: 4278199775
+    locked: 0
+  - name: coletaveis
+    uniqueID: 96130813
     locked: 0
