@@ -8,7 +8,7 @@ public class tomadano : MonoBehaviour
     private float vida;
 	public vida barraDeVida;
 	
-	void Start(){
+	protected virtual void Start(){
 		vida = vidaMaxima;
 		if (barraDeVida != null){
 			barraDeVida.VidaCheia = vidaMaxima;
@@ -28,11 +28,6 @@ public class tomadano : MonoBehaviour
 	}
 	
 	protected virtual void AoMorrer(){
-        Morte m = GetComponent<Morte>();
-        if (m != null)
-        {
-            Morte.Morre();
-        }
         Destroy(gameObject);
 	}
 }
