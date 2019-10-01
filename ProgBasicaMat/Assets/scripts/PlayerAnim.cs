@@ -6,7 +6,7 @@ public class PlayerAnim : MonoBehaviour
 {
     Animator animator;
     public Transform objParaGirar;
-
+    [SerializeField] Player player;
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +14,10 @@ public class PlayerAnim : MonoBehaviour
         animator = GetComponent<Animator>();
         if (objParaGirar == null) {
             objParaGirar = transform.parent;
+        }
+        if (player == null)
+        {
+            player = transform.parent.GetComponent<Player>();
         }
     }
 
@@ -33,7 +37,7 @@ public class PlayerAnim : MonoBehaviour
         {
             objParaGirar.eulerAngles = new Vector3(0, 180, 0);
         }
-        
+        animator.SetBool("pulo", ! player.podePular);
     }
 
 }
