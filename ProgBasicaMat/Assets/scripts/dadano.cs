@@ -7,11 +7,11 @@ public class dadano : MonoBehaviour
     public float dano;
     public bool destroiseAoDarDano;
 
-    void OnCollisionEnter2D(Collision2D col) {
+    protected void OnCollisionEnter2D(Collision2D col) {
         OnTriggerEnter2D(col.collider);
     }
 
-	protected void OnTriggerEnter2D(Collider2D col){
+	protected virtual void OnTriggerEnter2D(Collider2D col){
 		tomadano t = col.GetComponent<tomadano>();
 		
 		if(t != null){
