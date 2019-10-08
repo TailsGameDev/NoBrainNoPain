@@ -8,6 +8,7 @@ public class tomadano : MonoBehaviour
 	public float vidaMaxima;
     private float vida;
 	public vida barraDeVida;
+    [SerializeField] GameObject criaAoMorrer;
 
 	protected virtual void Start(){
 		vida = vidaMaxima;
@@ -29,6 +30,7 @@ public class tomadano : MonoBehaviour
 	}
 	
 	protected virtual void AoMorrer(){
+        if (criaAoMorrer != null) Instantiate(criaAoMorrer, transform.position, transform.rotation);
         Destroy(gameObject);
 	}
     
