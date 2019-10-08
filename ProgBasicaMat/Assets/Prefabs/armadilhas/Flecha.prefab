@@ -157,3 +157,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dano: 20
   destroiseAoDarDano: 0
+  imune: 

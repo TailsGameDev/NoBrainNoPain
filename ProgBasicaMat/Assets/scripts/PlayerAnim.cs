@@ -38,6 +38,14 @@ public class PlayerAnim : MonoBehaviour
             objParaGirar.eulerAngles = new Vector3(0, 180, 0);
         }
         animator.SetBool("pulo", ! player.podePular);
+
+
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            animator.SetTrigger("Mordida");
+        }
+
     }
 
 }

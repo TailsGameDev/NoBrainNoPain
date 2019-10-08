@@ -6,6 +6,7 @@ public class dadano : MonoBehaviour
 {
     public float dano;
     public bool destroiseAoDarDano;
+    public string imune = "nada";
 
     protected void OnCollisionEnter2D(Collision2D col) {
         OnTriggerEnter2D(col.collider);
@@ -14,7 +15,7 @@ public class dadano : MonoBehaviour
 	protected virtual void OnTriggerEnter2D(Collider2D col){
 		tomadano t = col.GetComponent<tomadano>();
 		
-		if(t != null){
+		if(t != null && t.identificador != imune){
 			AoDarDano(t);
 		}
 	}
@@ -25,5 +26,9 @@ public class dadano : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+
+
+
 	}
 }

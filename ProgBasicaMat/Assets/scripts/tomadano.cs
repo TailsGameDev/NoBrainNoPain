@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class tomadano : MonoBehaviour
 {
+    public string identificador;
 	public float vidaMaxima;
     private float vida;
 	public vida barraDeVida;
-	
+
 	protected virtual void Start(){
 		vida = vidaMaxima;
 		if (barraDeVida != null){
@@ -30,4 +31,8 @@ public class tomadano : MonoBehaviour
 	protected virtual void AoMorrer(){
         Destroy(gameObject);
 	}
+    
+    
+         
+
 }

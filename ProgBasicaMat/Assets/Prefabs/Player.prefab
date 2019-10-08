@@ -195,6 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objParaGirar: {fileID: 7150298708759840062}
+  player: {fileID: 0}
 --- !u!95 &7150298708753072735
 Animator:
   serializedVersion: 3
@@ -228,6 +229,7 @@ GameObject:
   - component: {fileID: 7150298708759840061}
   - component: {fileID: 166852863}
   - component: {fileID: 80114947}
+  - component: {fileID: 7281760574499637476}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -302,6 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6329533c403f9e54c893f2da35b0813e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mordida: {fileID: 0}
   Vomito: {fileID: 6197658566835967872, guid: 51e6dc0bfdeaf6b4780f51d4b5fbdeb6, type: 3}
   Boca: {fileID: 7150298708607157389}
 --- !u!114 &166852863
@@ -333,3 +336,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.0828197}
   m_Size: {x: 0.521623, y: 1.5257258}
   m_Direction: 0
+--- !u!114 &7281760574499637476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7150298708759840035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db71fe68d6284f54abd7946f7d35ed08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  identificador: player
+  vidaMaxima: 100
+  barraDeVida: {fileID: 0}
+  Identificador: 0

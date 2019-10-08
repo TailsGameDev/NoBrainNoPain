@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6197658566835967901}
   - component: {fileID: 6197658566835967875}
   - component: {fileID: 6197658566835967900}
+  - component: {fileID: 2629296270470425444}
   m_Layer: 0
   m_Name: Vomito
   m_TagString: Untagged
@@ -94,6 +95,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2629296270470425444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6197658566835967872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 997e84f287490fb4f860f87ebdb513c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dano: 0
+  destroiseAoDarDano: 0
+  imune: player
 --- !u!1 &6197658567122763433
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,7 +200,7 @@ Animator:
   m_GameObject: {fileID: 6197658567122763433}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c510cc99baac24643bb3ad6d9785720b, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
