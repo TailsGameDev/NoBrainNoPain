@@ -12,6 +12,8 @@ TagManager:
   - cerebro
   - cerebroHUD
   - barraDeVida
+  - Inimigo
+  - Limite
   layers:
   - Default
   - TransparentFX
@@ -69,4 +71,7 @@ TagManager:
     locked: 0
   - name: coletaveis
     uniqueID: 96130813
+    locked: 0
+  - name: inimigos
+    uniqueID: 3483374453
     locked: 0
