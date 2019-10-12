@@ -71,6 +71,7 @@ GameObject:
   - component: {fileID: 1070663144949947552}
   - component: {fileID: 1070663144949947553}
   - component: {fileID: 1070663144949947559}
+  - component: {fileID: 373495415298725263}
   m_Layer: 0
   m_Name: humano
   m_TagString: Inimigo
@@ -208,7 +209,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92d45ddb4852507449fe7ab8f11bf089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 1
+--- !u!114 &373495415298725263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070663144949947485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e86bebb985595d43b650900f9e1ed92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  identificador: humano
+  vidaMaxima: 20
+  barraDeVida: {fileID: 0}
+  criaAoMorrer: {fileID: 0}
 --- !u!1 &1070663145508197528
 GameObject:
   m_ObjectHideFlags: 0

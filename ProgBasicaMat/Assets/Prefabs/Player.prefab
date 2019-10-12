@@ -305,7 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6329533c403f9e54c893f2da35b0813e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mordida: {fileID: 0}
+  mordida: {fileID: 4376980676283265250, guid: 8ff6ddba817bc184b8651102b096e1bb, type: 3}
   Vomito: {fileID: 6197658566835967872, guid: 51e6dc0bfdeaf6b4780f51d4b5fbdeb6, type: 3}
   Boca: {fileID: 7150298708607157389}
 --- !u!114 &166852863

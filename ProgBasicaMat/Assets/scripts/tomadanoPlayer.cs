@@ -8,7 +8,9 @@ public class tomadanoPlayer : tomadano
     protected override void Start()
     {
         if (barraDeVida == null) {
-            barraDeVida = GameObject.FindGameObjectWithTag("barraVidaPlayer").GetComponent<vida>();
+            if (GameObject.FindGameObjectWithTag("barraVidaPlayer") != null) {
+                barraDeVida = GameObject.FindGameObjectWithTag("barraVidaPlayer").GetComponent<vida>();
+            }
         }
 
         base.Start();

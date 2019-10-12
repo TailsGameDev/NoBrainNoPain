@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dano: 5
-  destroiseAoDarDano: 0
+  destroiseAoDarDano: 1
   imune: player
 --- !u!58 &5005028094849003118
 CircleCollider2D:

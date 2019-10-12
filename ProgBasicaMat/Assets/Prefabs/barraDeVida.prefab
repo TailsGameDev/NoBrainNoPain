@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4018519154161389401}
   m_Layer: 5
   m_Name: sangue
-  m_TagString: barraDeVida
+  m_TagString: barraVidaPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 4018519155070711617}
   m_Layer: 5
   m_Name: barraDeVida
-  m_TagString: Untagged
+  m_TagString: barraDeVida
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

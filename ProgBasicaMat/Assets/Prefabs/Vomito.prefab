@@ -107,8 +107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 997e84f287490fb4f860f87ebdb513c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dano: 0
-  destroiseAoDarDano: 0
+  dano: 10
+  destroiseAoDarDano: 1
   imune: player
 --- !u!1 &6197658567122763433
 GameObject:
