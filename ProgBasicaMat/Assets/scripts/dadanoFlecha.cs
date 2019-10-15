@@ -2,17 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Flechas : MonoBehaviour
+public class dadanoFlecha : Flechas
 {
-    Rigidbody2D RP2D;
-    public float velocity;
-
     // Start is called before the first frame update
     void Start()
     {
-        RP2D = GetComponent<Rigidbody2D>();
-        RP2D.velocity = transform.right*velocity;
-        print(transform.forward);
+        
+
 
 
     }

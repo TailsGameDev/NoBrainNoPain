@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   identificador: humano
-  vidaMaxima: 20
+  vidaMaxima: 50
   barraDeVida: {fileID: 0}
   criaAoMorrer: {fileID: 0}
 --- !u!1 &1070663145508197528

@@ -184,6 +184,11 @@ PrefabInstance:
       propertyPath: velocity
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1545941478273330448, guid: bd8c5e792ac0bbe4c8986e215cb4ff70,
+        type: 3}
+      propertyPath: destroiseAoDarDano
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd8c5e792ac0bbe4c8986e215cb4ff70, type: 3}
 --- !u!1001 &76927188
@@ -1119,6 +1124,11 @@ PrefabInstance:
       propertyPath: velocity
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1545941478273330448, guid: bd8c5e792ac0bbe4c8986e215cb4ff70,
+        type: 3}
+      propertyPath: destroiseAoDarDano
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd8c5e792ac0bbe4c8986e215cb4ff70, type: 3}
 --- !u!1 &559715362
@@ -1706,6 +1716,11 @@ PrefabInstance:
       propertyPath: velocity
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1545941478273330448, guid: bd8c5e792ac0bbe4c8986e215cb4ff70,
+        type: 3}
+      propertyPath: destroiseAoDarDano
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd8c5e792ac0bbe4c8986e215cb4ff70, type: 3}
 --- !u!1 &1342157298
@@ -2165,6 +2180,11 @@ PrefabInstance:
       propertyPath: velocity
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1545941478273330448, guid: bd8c5e792ac0bbe4c8986e215cb4ff70,
+        type: 3}
+      propertyPath: destroiseAoDarDano
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd8c5e792ac0bbe4c8986e215cb4ff70, type: 3}
 --- !u!1 &1853358118
@@ -2205,22 +2225,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7150298709008036943}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1995752000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1995751999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db71fe68d6284f54abd7946f7d35ed08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  identificador: 
-  vidaMaxima: 100
-  barraDeVida: {fileID: 1998601431}
-  criaAoMorrer: {fileID: 0}
 --- !u!114 &1995752007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2231,18 +2235,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 908dfeda08b2b094d99f3f1a97254fa4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1998601431 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4018519154161389401, guid: dee758cb9fb29fc45ab30fbc6131a45a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1373644328}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12a75052242b1a14384680a86a9d45ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &2001850204
@@ -2460,6 +2452,17 @@ PrefabInstance:
         type: 3}
       propertyPath: velocity
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245556375129980678, guid: bd8c5e792ac0bbe4c8986e215cb4ff70,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 209d068adf087c64a98aff39745959e2,
+        type: 3}
+    - target: {fileID: 1545941478273330448, guid: bd8c5e792ac0bbe4c8986e215cb4ff70,
+        type: 3}
+      propertyPath: destroiseAoDarDano
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd8c5e792ac0bbe4c8986e215cb4ff70, type: 3}
@@ -11844,11 +11847,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.53
       objectReference: {fileID: 0}
-    - target: {fileID: 7150298708759840032, guid: 54e0b9b4943edff4b83e21864dde9b95,
-        type: 3}
-      propertyPath: forcaPulo
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 80114947, guid: 54e0b9b4943edff4b83e21864dde9b95, type: 3}
       propertyPath: m_Offset.x
       value: 0.00024080276
@@ -11864,6 +11862,11 @@ PrefabInstance:
     - target: {fileID: 80114947, guid: 54e0b9b4943edff4b83e21864dde9b95, type: 3}
       propertyPath: m_Size.y
       value: 1.6392823
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150298708759840032, guid: 54e0b9b4943edff4b83e21864dde9b95,
+        type: 3}
+      propertyPath: forcaPulo
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54e0b9b4943edff4b83e21864dde9b95, type: 3}
