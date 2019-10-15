@@ -5,6 +5,7 @@ using UnityEngine;
 public class ExplosaoTronco : MonoBehaviour
 {
     Rigidbody2D player;
+    public float forca;
 
     private void OnCollisionEnter2D (Collision2D col) {
         if (col.collider.tag == "Player") {
@@ -16,7 +17,6 @@ public class ExplosaoTronco : MonoBehaviour
     IEnumerator Voa () {
         float t = 0;
         float delay = 1f;
-        float forca = 30;
         float forcaInicial = forca;
         float taxaDimForca = -forca/delay;
 
