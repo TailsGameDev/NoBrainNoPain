@@ -13,17 +13,21 @@ public class CameraSpot : MonoBehaviour
         }
     }
 
+    /*
     private void OnTriggerEnter2D (Collider2D col) {
         if (col.tag == "Player") {
-            if (trocando == false) {
-                StartCoroutine(VemCamera());
-            }
+            StartCoroutine(VemCamera());
         }
+    }
+    */
+
+    public void SejaMinhaCamera () {
+        StartCoroutine(VemCamera());
     }
 
     IEnumerator VemCamera () {
         trocando = true;
-            float delay = 1f;
+            float delay = .3f;
             float t = 0;
             while (t < delay) {
                 t += Time.deltaTime;

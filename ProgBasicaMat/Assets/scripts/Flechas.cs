@@ -12,9 +12,6 @@ public class Flechas : MonoBehaviour
     {
         RP2D = GetComponent<Rigidbody2D>();
         RP2D.velocity = transform.right*velocity;
-        print(transform.forward);
-
-
     }
 
     // Update is called once per frame
