@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public bool podePular;
     Rigidbody2D corpo;
     public float speed = 5, horiDirect, VerDirect, forcaPulo;
+    public float forcaInicial;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,11 @@ public class Player : MonoBehaviour
 
         horiDirect = Input.GetAxis("Horizontal");
 
+        if (Input.GetKeyDown("space"))
+        {
+            StartCoroutine(Voa());
+        }
+
         corpo.velocity = new Vector2(horiDirect * speed, corpo.velocity.y);
         if (Input.GetKeyDown(KeyCode.W) && podePular)
         {
@@ -29,4 +35,22 @@ public class Player : MonoBehaviour
         }
     }
 
+    IEnumerator Voa()
+    {
+        float t = 0;
+        float delay = 1f;
+        float forca = forcaInicial;
+        float taxaDimForca = -forca / delay;
+
+        var player = GetComponent<Rigidbody2D>();
+
+        while (t < delay)
+        {
+            if (player == null) yield break;
+            player.velocity = player.velocity - new Vector2(forca, 0);
+            forca = forcaInicial + taxaDimForca * t;
+            t += Time.deltaTime;
+            yield return null;
+        }
+    }
 }
