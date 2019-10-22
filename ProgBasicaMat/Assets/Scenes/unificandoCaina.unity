@@ -12853,5 +12853,10 @@ PrefabInstance:
       propertyPath: contadorHUD
       value: 
       objectReference: {fileID: 1580271356}
+    - target: {fileID: 7150298708759840032, guid: 54e0b9b4943edff4b83e21864dde9b95,
+        type: 3}
+      propertyPath: forcaInicial
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54e0b9b4943edff4b83e21864dde9b95, type: 3}
