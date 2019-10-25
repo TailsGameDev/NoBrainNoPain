@@ -225,7 +225,8 @@ MonoBehaviour:
   identificador: humano
   vidaMaxima: 50
   barraDeVida: {fileID: 0}
-  criaAoMorrer: {fileID: 0}
+  criaAoMorrer: {fileID: 4256568566100350223, guid: 9087cb79146aaa34b8177ec878957d0b,
+    type: 3}
 --- !u!1 &1070663145508197528
 GameObject:
   m_ObjectHideFlags: 0
