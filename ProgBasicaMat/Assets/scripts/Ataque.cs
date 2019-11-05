@@ -9,10 +9,19 @@ public class Ataque : MonoBehaviour
     public GameObject mordida;
     public GameObject Vomito; //o vomito em si, que por si soh jah se move.
     public GameObject Boca; //spawn point do vomito
+    bool podevomito;
+  
 
     private void Update () {
+      
+
+
+        
         if (Input.GetMouseButtonDown(1))
         {
+          
+
+
             GameObject vomito = Instantiate(Vomito, Boca.transform.position, Boca.transform.rotation);
         }
 
