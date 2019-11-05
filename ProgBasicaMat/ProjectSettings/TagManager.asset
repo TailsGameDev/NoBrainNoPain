@@ -55,6 +55,9 @@ TagManager:
   - name: tilemapFundo
     uniqueID: 2747842169
     locked: 0
+  - name: mercador
+    uniqueID: 103261131
+    locked: 0
   - name: player
     uniqueID: 3645152991
     locked: 0
