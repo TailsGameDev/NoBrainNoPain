@@ -13,13 +13,12 @@ public class CameraSpot : MonoBehaviour
         }
     }
 
-    /*
+    
     private void OnTriggerEnter2D (Collider2D col) {
-        if (col.tag == "Player") {
-            StartCoroutine(VemCamera());
+        if (col.tag == "cova") {
+            maincamera.transform.position = transform.position;
         }
     }
-    */
 
     public void SejaMinhaCamera () {
         StartCoroutine(VemCamera());

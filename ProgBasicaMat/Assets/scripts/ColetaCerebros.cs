@@ -4,11 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ColetaCerebros : MonoBehaviour {
+    public static ColetaCerebros coletor;
     static int qtdAoNascer;
     int qtdAtual;
     [SerializeField] Text contadorHUD;
 
     private void Start () {
+        coletor = this;
         if (contadorHUD == null) {
             GameObject contadorGameObject = GameObject.FindGameObjectWithTag("cerebroHUD");
             if (contadorGameObject != null) {
@@ -34,6 +36,16 @@ public class ColetaCerebros : MonoBehaviour {
         qtdAoNascer = qtdAtual;
     }
 
+    public bool Pagar (int preco) {
+        bool deu = false;
+        if (qtdAtual >= preco) {
+            qtdAtual = qtdAtual - preco;
+            SalvaQtdCerebros();
+            deu = true;
+        }
+        contadorHUD.text = "x" + qtdAtual;
+        return deu;
+    }
     //depois tem que fazer a questao de poder gastar cérebros. Recomendo fazer com função e deixar
     //a variável qtdAtual privada
 }
