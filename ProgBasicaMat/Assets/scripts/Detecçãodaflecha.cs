@@ -8,6 +8,7 @@ public class Detecçãodaflecha : MonoBehaviour
     bool teveColisao;
     public GameObject flecha;
     public Transform spawn;
+    public Animator anim;
 
 
     // Start is called before the first frame update
@@ -32,7 +33,17 @@ public class Detecçãodaflecha : MonoBehaviour
         if (col.tag == "Player")
         {
             teveColisao = true;
-            Instantiate(flecha, spawn.position, spawn.rotation);
+            anim.SetTrigger("atirou");
+
+            Invoke("atira",0.5f);
+            
+
         }
     }
+
+    void atira()
+    {
+        Instantiate(flecha, spawn.position, spawn.rotation);
+    }
+
 }

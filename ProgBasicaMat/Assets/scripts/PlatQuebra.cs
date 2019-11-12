@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlatQuebra : MonoBehaviour
 {
+    public GameObject platQuebrando;
     private void OnCollisionEnter2D (Collision2D collision) {
         OnTriggerEnter2D(collision.collider);
     }
@@ -16,6 +17,7 @@ public class PlatQuebra : MonoBehaviour
     }
 
     void Quebrar () {
+        Instantiate(platQuebrando, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
