@@ -10,19 +10,40 @@ public class Ataque : MonoBehaviour
     public GameObject Vomito; //o vomito em si, que por si soh jah se move.
     public GameObject Boca; //spawn point do vomito
     bool podevomito;
-  
+    public float vomitoMaximo = 100f;
+    //public float vomitoAtual = 0;
+    [SerializeField] float vomitoAtual;
+    public vida barraVomito;
+
+
+    private void Start()
+    {
+        barraVomito = GameObject.FindGameObjectWithTag("barraVomito").GetComponent<vida>();
+        setVomitoAtual(0);
+    }
+
+    public float getVomitoAtual()
+    {
+        return this.vomitoAtual;
+    }
+
+    public void setVomitoAtual(float value)
+    {
+        vomitoAtual = value;
+        barraVomito.VidaDoPersonagem = vomitoAtual;
+    }
 
     private void Update () {
       
-
-
         
         if (Input.GetMouseButtonDown(1))
         {
-          
 
-
-            GameObject vomito = Instantiate(Vomito, Boca.transform.position, Boca.transform.rotation);
+            if (vomitoAtual > 99) {
+                GameObject vomito = Instantiate(Vomito, Boca.transform.position, Boca.transform.rotation);
+                setVomitoAtual(0);
+            }
+            
         }
 
         if (Input.GetMouseButtonDown(0))

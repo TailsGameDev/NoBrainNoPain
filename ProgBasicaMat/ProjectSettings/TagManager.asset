@@ -17,6 +17,7 @@ TagManager:
   - barraVidaPlayer
   - cova
   - fundoVidaPlayer
+  - barraVomito
   layers:
   - Default
   - TransparentFX
