@@ -184,6 +184,11 @@ PrefabInstance:
       propertyPath: velocity
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1545941478273330448, guid: bd8c5e792ac0bbe4c8986e215cb4ff70,
+        type: 3}
+      propertyPath: destroiseAoDarDano
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd8c5e792ac0bbe4c8986e215cb4ff70, type: 3}
 --- !u!1001 &76927188
@@ -280,6 +285,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 99526232}
+  - component: {fileID: 99526233}
   m_Layer: 0
   m_Name: flechas
   m_TagString: Untagged
@@ -306,6 +312,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &99526233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99526231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 997e84f287490fb4f860f87ebdb513c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dano: 0
+  destroiseAoDarDano: 1
+  imune: nada
 --- !u!1001 &103451492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1597,6 +1618,11 @@ PrefabInstance:
       propertyPath: velocity
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1545941478273330448, guid: bd8c5e792ac0bbe4c8986e215cb4ff70,
+        type: 3}
+      propertyPath: destroiseAoDarDano
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd8c5e792ac0bbe4c8986e215cb4ff70, type: 3}
 --- !u!1 &559715362
@@ -2462,6 +2488,11 @@ PrefabInstance:
       propertyPath: velocity
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1545941478273330448, guid: bd8c5e792ac0bbe4c8986e215cb4ff70,
+        type: 3}
+      propertyPath: destroiseAoDarDano
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd8c5e792ac0bbe4c8986e215cb4ff70, type: 3}
 --- !u!1 &1342157298
@@ -3024,6 +3055,11 @@ PrefabInstance:
       propertyPath: velocity
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1545941478273330448, guid: bd8c5e792ac0bbe4c8986e215cb4ff70,
+        type: 3}
+      propertyPath: destroiseAoDarDano
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd8c5e792ac0bbe4c8986e215cb4ff70, type: 3}
 --- !u!1 &1853358118
@@ -3553,6 +3589,11 @@ PrefabInstance:
         type: 3}
       propertyPath: velocity
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1545941478273330448, guid: bd8c5e792ac0bbe4c8986e215cb4ff70,
+        type: 3}
+      propertyPath: destroiseAoDarDano
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd8c5e792ac0bbe4c8986e215cb4ff70, type: 3}
