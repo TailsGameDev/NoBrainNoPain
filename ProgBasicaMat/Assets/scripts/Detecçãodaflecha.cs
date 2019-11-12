@@ -10,19 +10,6 @@ public class Detecçãodaflecha : MonoBehaviour
     public Transform spawn;
     public Animator anim;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnCollisionEnter2D(Collision2D col)
     {
         OnTriggerEnter2D(col.collider);
@@ -36,8 +23,6 @@ public class Detecçãodaflecha : MonoBehaviour
             anim.SetTrigger("atirou");
 
             Invoke("atira",0.5f);
-            
-
         }
     }
 

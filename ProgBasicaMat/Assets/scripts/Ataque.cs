@@ -11,7 +11,6 @@ public class Ataque : MonoBehaviour
     public GameObject Boca; //spawn point do vomito
     bool podevomito;
     public float vomitoMaximo = 100f;
-    //public float vomitoAtual = 0;
     [SerializeField] float vomitoAtual;
     public vida barraVomito;
 
@@ -19,7 +18,7 @@ public class Ataque : MonoBehaviour
     private void Start()
     {
         barraVomito = GameObject.FindGameObjectWithTag("barraVomito").GetComponent<vida>();
-        setVomitoAtual(0);
+        setVomitoAtual(100);
     }
 
     public float getVomitoAtual()

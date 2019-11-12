@@ -18,6 +18,8 @@ TagManager:
   - cova
   - fundoVidaPlayer
   - barraVomito
+  - canvas
+  - mercador
   layers:
   - Default
   - TransparentFX

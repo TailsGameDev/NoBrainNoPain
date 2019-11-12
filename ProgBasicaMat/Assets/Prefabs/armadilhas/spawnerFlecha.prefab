@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1514324328806803927}
   m_LocalRotation: {x: -0, y: -0, z: -0.31774718, w: 0.9481755}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.4989, y: 5.4989, z: 5.4989}
+  m_LocalPosition: {x: -10.69, y: 1.91, z: 0}
+  m_LocalScale: {x: 4.39912, y: 4.39912, z: 4.39912}
   m_Children: []
   m_Father: {fileID: 1766283177245280871}
   m_RootOrder: 1
@@ -67,7 +67,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 83515197
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6624bf8b49972af4c819d0ce849e9190, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -90,7 +90,7 @@ Animator:
   m_GameObject: {fileID: 1514324328806803927}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 492611d4e66b98e4cb3e9be4af584a58, type: 2}
+  m_Controller: {fileID: 9100000, guid: b45873fe7c8596844bf3ad2f1bc57074, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -167,7 +167,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 83515197
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6624bf8b49972af4c819d0ce849e9190, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -208,7 +208,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1766283177271454299}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.16, y: -2.64, z: 0}
+  m_LocalPosition: {x: -2.6, y: -3.5, z: 0}
   m_LocalScale: {x: 1.4236, y: 2.45571, z: 1.4236}
   m_Children:
   - {fileID: 1766283177245280871}
@@ -250,7 +250,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 83515197
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7e953398150d96c4f8949c7a2ed32370, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.11764706}
@@ -277,6 +277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flecha: {fileID: 4180291667775478646, guid: bd8c5e792ac0bbe4c8986e215cb4ff70, type: 3}
   spawn: {fileID: 1766283178745306252}
+  anim: {fileID: 5463441741941925120}
 --- !u!61 &1766283177271454308
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -347,10 +348,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1766283178745306255}
-  m_LocalRotation: {x: -0, y: -0, z: 0.9298479, w: 0.36794412}
-  m_LocalPosition: {x: -1.07, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.2976923, w: 0.9546619}
+  m_LocalPosition: {x: -10.3, y: 1.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1766283177245280871}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 136.822}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -34.638}
