@@ -9,12 +9,32 @@ public class vida : MonoBehaviour{
 	public Image sangue;
 	public float VidaCheia = 100;
 	float larguraSangueOriginal;
+    public bool aumentado;
+
 	void Start (){
-		VidaDoPersonagem = VidaCheia;
-		larguraSangueOriginal = sangue.GetComponent<RectTransform>().sizeDelta.x; //aqui
+        VidaDoPersonagem = VidaCheia;
+        larguraSangueOriginal = sangue.GetComponent<RectTransform>().sizeDelta.x; //aqui
+        StartCoroutine(AjustaTamanho());
 	}
+
+    IEnumerator AjustaTamanho () {
+        yield return null;
+        VidaDoPersonagem = VidaCheia;
+        larguraSangueOriginal = sangue.GetComponent<RectTransform>().sizeDelta.x; //aqui
+    }
+
 	void Update (){
-		
+
+        if (aumentado) {
+            larguraSangueOriginal *= 1.25f;
+            aumentado = false;
+            transform.parent.GetComponent<RectTransform>().sizeDelta =
+                new Vector2(
+                    transform.parent.GetComponent<RectTransform>().sizeDelta.x *1.25f,
+                    transform.parent.GetComponent<RectTransform>().sizeDelta.y
+                );
+        }
+
 		if(VidaDoPersonagem >= VidaCheia) {
 		   VidaDoPersonagem = VidaCheia;
 		} else if(VidaDoPersonagem <= 0) {

@@ -6,7 +6,7 @@ public class tomadano : MonoBehaviour
 {
     public string identificador;
 	public float vidaMaxima;
-    private float vida;
+    [SerializeField] protected float vida;
 	public vida barraDeVida;
     [SerializeField] GameObject criaAoMorrer;
 
@@ -20,6 +20,10 @@ public class tomadano : MonoBehaviour
 	public void SomaAVida(float qtd){
 		vida += qtd;
 		
+        if(vida > vidaMaxima) {
+            vida = vidaMaxima;
+        }
+
 		if (barraDeVida != null){
 			barraDeVida.VidaDoPersonagem = vida;
 		}

@@ -169,7 +169,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -649814305
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 925a79b4ce225214184862efa5b097a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 166852863}
   - component: {fileID: 80114947}
   - component: {fileID: 7281760574499637476}
-  - component: {fileID: 4553172329381694450}
+  - component: {fileID: 4493463867233594351}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -293,6 +293,7 @@ MonoBehaviour:
   horiDirect: 0
   VerDirect: 0
   forcaPulo: 6
+  forcaInicial: 0
 --- !u!114 &7150298708759840061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,7 +355,7 @@ MonoBehaviour:
   barraDeVida: {fileID: 0}
   criaAoMorrer: {fileID: 489318195484266690, guid: 303a0c460b39cfe468d56308987d35bd,
     type: 3}
---- !u!114 &4553172329381694450
+--- !u!114 &4493463867233594351
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -363,6 +364,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7150298708759840035}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 908dfeda08b2b094d99f3f1a97254fa4, type: 3}
+  m_Script: {fileID: 11500000, guid: 0397b14e502dcd541ac83141ba2a1276, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
