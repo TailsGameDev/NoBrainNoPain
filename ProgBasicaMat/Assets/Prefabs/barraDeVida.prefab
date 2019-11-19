@@ -90,6 +90,7 @@ MonoBehaviour:
   VidaDoPersonagem: 0
   sangue: {fileID: 4018519154161389403}
   VidaCheia: 100
+  aumentado: 0
 --- !u!1 &4018519154757784795
 GameObject:
   m_ObjectHideFlags: 0

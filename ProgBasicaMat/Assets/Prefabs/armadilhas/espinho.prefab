@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2050885018682752497}
   - component: {fileID: 2050885018682752496}
   m_Layer: 0
-  m_Name: Espinho
+  m_Name: espinho
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2050885018682752502}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.1303823, y: -0.5534377, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 8.8, y: 7.36, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -70,7 +70,7 @@ SpriteRenderer:
   m_SortingLayerID: 83515197
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 134b670563aa53b41966b2ad25d2fdb8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d484d3f0ceaafc240b0e6a4248af3f66, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,7 +98,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.32, y: 0.32}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -106,9 +106,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.5}
-      - {x: -0.4330127, y: -0.25000003}
-      - {x: 0.43301272, y: -0.24999996}
+    - - {x: 0.067195304, y: 0.009352578}
+      - {x: -0.055032715, y: 0.010890543}
+      - {x: -0.10004786, y: -0.10487102}
+      - {x: 0.107270725, y: -0.10487095}
 --- !u!114 &2050885018682752496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,3 +124,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dano: 100000000
   destroiseAoDarDano: 0
+  imune: nada

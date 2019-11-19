@@ -17,6 +17,11 @@ TagManager:
   - barraVidaPlayer
   - cova
   - fundoVidaPlayer
+  - barraVomito
+  - canvas
+  - mercador
+  - visao
+  - mordida
   layers:
   - Default
   - TransparentFX

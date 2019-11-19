@@ -5,4 +5,5 @@ using UnityEngine;
 public class Comprou : MonoBehaviour
 {
     public static int coracoes = 0;
+    public static int pes = 0;
 }

@@ -12,6 +12,12 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        int pesQtdd = Comprou.pes;
+        while (pesQtdd > 0)
+        {
+            speed += 1;
+            pesQtdd -= 1;
+        }
         corpo = gameObject.GetComponent<Rigidbody2D>();
     }
 
