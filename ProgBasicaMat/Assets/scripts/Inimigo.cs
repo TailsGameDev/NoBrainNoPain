@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Inimigo : MonoBehaviour
 { 
-    public GameObject estocada, pontaDaLanca;
-    private bool eLadoDireito;
-    [SerializeField] private float speed;
-    float speedOriginal;
-    Animator anim;
-    bool atacando = false;
+     public GameObject estocada, pontaDaLanca;
+    protected bool eLadoDireito;
+    [SerializeField] protected float speed;
+    protected float speedOriginal;
+    protected Animator anim;
+    protected bool atacando = false;
 
     // Start is called before the first frame update
-    void Start()
+    protected void Start()
     {
         speedOriginal = speed;
         eLadoDireito = true;
@@ -20,12 +20,12 @@ public class Inimigo : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         Mover();
        
     }
-    private void OnTriggerStay2D(Collider2D collision)
+    protected void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag == "Player" && !atacando)
         {
@@ -33,7 +33,7 @@ public class Inimigo : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Limite")
         {
@@ -45,7 +45,7 @@ public class Inimigo : MonoBehaviour
         }
     }
 
-    void Mover()
+    protected void Mover()
     {
         transform.Translate(PegarDirecao() * (speed * Time.deltaTime));
     }
@@ -53,25 +53,21 @@ public class Inimigo : MonoBehaviour
 
 
     //m
-    void continuarDano()
-    {
-      
+   
 
-    }
-
-    private Vector2 PegarDirecao()
+    protected Vector2 PegarDirecao()
     {
         return eLadoDireito ? Vector2.right : Vector2.left;
     }
 
-    void MudarDirecao()
+    protected void MudarDirecao()
     {
         eLadoDireito = !eLadoDireito;
         transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 
     }
 
-    private void Atacar()
+    protected void Atacar()
     {
         atacando = true;
         speed = 0;
@@ -81,17 +77,17 @@ public class Inimigo : MonoBehaviour
         Invoke("setBoolFalse", 0.2f);
     }
 
-    void CriaEstocada()
+    protected void CriaEstocada()
     {
         GameObject Estocada = Instantiate(estocada, pontaDaLanca.transform.position, pontaDaLanca.transform.rotation);
        
     }
 
-    void setBoolFalse()
+    protected  void setBoolFalse()
     {
         anim.SetBool("atacando", false);
     }
-    void voltarAoNormal ()
+    protected void voltarAoNormal ()
     {
         speed = speedOriginal;
         atacando = false;
