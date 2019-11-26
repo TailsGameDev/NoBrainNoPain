@@ -408,7 +408,7 @@ MonoBehaviour:
   speed: 5
   horiDirect: 0
   VerDirect: 0
-  forcaPulo: 6
+  forcaPulo: 7
   forcaInicialDash: 9
 --- !u!114 &7150298708759840061
 MonoBehaviour:
@@ -427,7 +427,7 @@ MonoBehaviour:
   Boca: {fileID: 7150298708607157389}
   vomitoMaximo: 100
   vomitoAtual: 0
-  barraVomito: {fileID: 0}
+  barraVomito: {fileID: 7230551226024956450}
 --- !u!114 &166852863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -802,6 +802,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7230551226024956450 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4018519154161389401, guid: dee758cb9fb29fc45ab30fbc6131a45a,
+    type: 3}
+  m_PrefabInstance: {fileID: 6024886006667222395}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12a75052242b1a14384680a86a9d45ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &6024886007128794235

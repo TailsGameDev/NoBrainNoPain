@@ -18,7 +18,8 @@ public class Ataque : MonoBehaviour
     private void Start()
     {
         barraVomito = GameObject.FindGameObjectWithTag("barraVomito").GetComponent<vida>();
-        setVomitoAtual(100);
+        vomitoAtual = 0;
+        barraVomito.VidaDoPersonagem = 0;
     }
 
     public float getVomitoAtual()
@@ -28,6 +29,11 @@ public class Ataque : MonoBehaviour
 
     public void setVomitoAtual(float value)
     {
+        if(Comprou.estamagos == 0)
+        {
+            return;
+        }
+
         vomitoAtual = value;
         barraVomito.VidaDoPersonagem = vomitoAtual;
     }
