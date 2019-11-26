@@ -7,11 +7,18 @@ public class Player : MonoBehaviour
     public bool podePular;
     Rigidbody2D corpo;
     public float speed = 5, horiDirect, VerDirect, forcaPulo;
-    public float forcaInicial;
+    float forcaPuloOriginal;
+    public float forcaInicialDash;
 
     // Start is called before the first frame update
     void Start()
     {
+        forcaPuloOriginal = forcaPulo;
+        int joelhoQtdd = Comprou.joelho;
+        if (joelhoQtdd < 1){
+            forcaPulo = 0;
+        }
+
         int pesQtdd = Comprou.pes;
         while (pesQtdd > 0)
         {
@@ -45,7 +52,13 @@ public class Player : MonoBehaviour
     {
         float t = 0;
         float delay = 1f;
-        float forca = forcaInicial;
+        float forca = Mathf.Abs(forcaInicialDash);
+
+        if (transform.localEulerAngles.y < 0.2f){
+            forca = - forca;
+            forcaInicialDash = forca;   
+        }
+
         float taxaDimForca = -forca / delay;
 
         var player = GetComponent<Rigidbody2D>();
@@ -54,9 +67,13 @@ public class Player : MonoBehaviour
         {
             if (player == null) yield break;
             player.velocity = player.velocity - new Vector2(forca, 0);
-            forca = forcaInicial + taxaDimForca * t;
+            forca = forcaInicialDash + taxaDimForca * t;
             t += Time.deltaTime;
             yield return null;
         }
+    }
+
+    public void RestauraPulo(){
+        forcaPulo = forcaPuloOriginal;
     }
 }
