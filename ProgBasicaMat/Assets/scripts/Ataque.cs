@@ -17,9 +17,13 @@ public class Ataque : MonoBehaviour
 
     private void Start()
     {
-        barraVomito = GameObject.FindGameObjectWithTag("barraVomito").GetComponent<vida>();
-        vomitoAtual = 0;
-        barraVomito.VidaDoPersonagem = 0;
+        StartCoroutine(zeraVomito());
+    }
+
+    IEnumerator zeraVomito(){
+        yield return null;
+        yield return null;
+        setVomitoAtual(0);
     }
 
     public float getVomitoAtual()
@@ -31,11 +35,12 @@ public class Ataque : MonoBehaviour
     {
         if(Comprou.estamagos == 0)
         {
-            return;
+            vomitoAtual = 0;
+            barraVomito.VidaDoPersonagem = 0;
+        } else {
+            vomitoAtual = value;
+            barraVomito.VidaDoPersonagem = vomitoAtual;
         }
-
-        vomitoAtual = value;
-        barraVomito.VidaDoPersonagem = vomitoAtual;
     }
 
     private void Update () {
@@ -55,7 +60,6 @@ public class Ataque : MonoBehaviour
         {
             GameObject Mordida = Instantiate(mordida, Boca.transform.position, Boca.transform.rotation);
         }
-
 
     }
 }

@@ -4,18 +4,13 @@ using UnityEngine;
 
 public class CompravelPe : Compravel
 {
-
-    public int qtdLimite;
-
-    private void Start()
+    protected void Start()
     {
         if (Comprou.pes >= qtdLimite)
         {
             gameObject.SetActive(false);
         }
     }
-
-
     protected override void Efeito()
     {
         Comprou.pes = Comprou.pes + 1;

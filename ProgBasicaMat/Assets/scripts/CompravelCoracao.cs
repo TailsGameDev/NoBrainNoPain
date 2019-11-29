@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class CompravelCoracao : Compravel
 {
-    public int qtdLimite;
-
-    private void Start () {
-        if (Comprou.coracoes >= qtdLimite) {
+    protected void Start()
+    {
+        if (Comprou.coracoes >= qtdLimite)
+        {
             gameObject.SetActive(false);
         }
     }
-
     protected override void Efeito () {
         Comprou.coracoes = Comprou.coracoes + 1;
         GameObject player = GameObject.FindGameObjectWithTag("Player");

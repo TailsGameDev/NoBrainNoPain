@@ -51,24 +51,26 @@ public class Player : MonoBehaviour
 
     IEnumerator Voa()
     {
-        dandoDash = true;
-        float t = 0;
-        float delay = .5f;
+        if (Comprou.pes > 0){
+            dandoDash = true;
+            float t = 0;
+            float delay = .5f;
 
-        bool direita = transform.localEulerAngles.y < 0.2f;
+            bool direita = transform.localEulerAngles.y < 0.2f;
 
-        int mult = 1;
-        if ( ! direita ){
-            mult = -1;
+            int mult = 1;
+            if ( ! direita ){
+                mult = -1;
+            }
+
+            while (t < delay)
+            {
+                corpo.velocity = new Vector2(10*mult, 0);
+                t += Time.deltaTime;
+                yield return null;
+            }
+            dandoDash = false;
         }
-
-        while (t < delay)
-        {
-            corpo.velocity = new Vector2(10*mult, 0);
-            t += Time.deltaTime;
-            yield return null;
-        }
-        dandoDash = false;
     }
 
     public void RestauraPulo(){

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public abstract class Compravel : MonoBehaviour
 {
     [SerializeField] Text precoText;
+    [SerializeField] protected int qtdLimite = 1;
 
     public void OnComprado (int preco) {
         // deu eh true se o player tinha cerebros suficientes
