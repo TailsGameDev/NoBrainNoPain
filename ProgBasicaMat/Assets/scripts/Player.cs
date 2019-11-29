@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public float speed = 5, horiDirect, VerDirect, forcaPulo;
     float forcaPuloOriginal;
     public float forcaInicialDash;
+    public bool dandoDash = false;
 
     // Start is called before the first frame update
     void Start()
@@ -50,27 +51,24 @@ public class Player : MonoBehaviour
 
     IEnumerator Voa()
     {
+        dandoDash = true;
         float t = 0;
-        float delay = 1f;
-        float forca = Mathf.Abs(forcaInicialDash);
+        float delay = .5f;
 
-        if (transform.localEulerAngles.y < 0.2f){
-            forca = - forca;
-            forcaInicialDash = forca;   
+        bool direita = transform.localEulerAngles.y < 0.2f;
+
+        int mult = 1;
+        if ( ! direita ){
+            mult = -1;
         }
-
-        float taxaDimForca = -forca / delay;
-
-        var player = GetComponent<Rigidbody2D>();
 
         while (t < delay)
         {
-            if (player == null) yield break;
-            player.velocity = player.velocity - new Vector2(forca, 0);
-            forca = forcaInicialDash + taxaDimForca * t;
+            corpo.velocity = new Vector2(10*mult, 0);
             t += Time.deltaTime;
             yield return null;
         }
+        dandoDash = false;
     }
 
     public void RestauraPulo(){

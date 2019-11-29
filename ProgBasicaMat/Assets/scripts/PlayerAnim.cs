@@ -24,6 +24,8 @@ public class PlayerAnim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        animator.SetBool("dandoDash", player.dandoDash);
+
         float h = Input.GetAxis("Horizontal");
 
         animator.SetFloat("HorizontalAxis", h);
@@ -38,8 +40,6 @@ public class PlayerAnim : MonoBehaviour
             objParaGirar.eulerAngles = new Vector3(0, 180, 0);
         }
         animator.SetBool("pulo", ! player.podePular);
-
-
 
         if (Input.GetMouseButtonDown(0))
         {

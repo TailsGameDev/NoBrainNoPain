@@ -410,6 +410,7 @@ MonoBehaviour:
   VerDirect: 0
   forcaPulo: 7
   forcaInicialDash: 9
+  dandoDash: 0
 --- !u!114 &7150298708759840061
 MonoBehaviour:
   m_ObjectHideFlags: 0
