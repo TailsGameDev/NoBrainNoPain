@@ -24,9 +24,7 @@ public class Executor : Inimigo
             }
                 transform.localScale = new Vector3(xScale * n, transform.localScale.y, transform.localScale.z);
         }
-        print("olhou");
         Invoke("OlhaProPlayer", 0.5f);
     }
   
-    
 }
