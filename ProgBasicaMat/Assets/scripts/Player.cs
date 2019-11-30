@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
 
     IEnumerator Voa()
     {
-        if (Comprou.pes > 0){
+        if (Comprou.pes > 0 && (! dandoDash)){
             dandoDash = true;
             float t = 0;
             float delay = .5f;

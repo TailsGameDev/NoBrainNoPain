@@ -15,7 +15,7 @@ public class dadano : MonoBehaviour
 	protected virtual void OnTriggerEnter2D(Collider2D col){
 		tomadano t = col.GetComponent<tomadano>();
 		
-		if(t != null && t.identificador != imune){
+		if(t != null && t.identificador != imune && t.tag != imune){
 			AoDarDano(t);
 		}
 	}
@@ -26,9 +26,5 @@ public class dadano : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-
-
-
 	}
 }
