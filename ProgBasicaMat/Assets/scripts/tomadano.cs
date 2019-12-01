@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class tomadano : MonoBehaviour
 {
+	[SerializeField] ParticleSystem particleSystem;
     public string identificador;
 	public float vidaMaxima;
     [SerializeField] protected float vida;
@@ -17,7 +18,11 @@ public class tomadano : MonoBehaviour
 		}
 	}
 	
-	public void SomaAVida(float qtd){
+	public virtual void SomaAVida(float qtd){
+		if (qtd < 0 && particleSystem != null){
+			particleSystem.Play();
+		}
+		
 		vida += qtd;
 		
         if(vida > vidaMaxima) {

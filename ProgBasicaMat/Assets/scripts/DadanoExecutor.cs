@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class DadanoExecutor : dadano
 {
+    [SerializeField] float delayDestroise;
     void Start(){
-        Invoke("Destroise", 1f);
+        Invoke("Destroise", delayDestroise);
     }
 
     void Destroise(){
