@@ -65,6 +65,12 @@ TagManager:
   - name: mercador
     uniqueID: 103261131
     locked: 0
+  - name: checkpoint
+    uniqueID: 851733521
+    locked: 0
+  - name: props
+    uniqueID: 3579206503
+    locked: 0
   - name: player
     uniqueID: 3645152991
     locked: 0
@@ -79,9 +85,6 @@ TagManager:
     locked: 0
   - name: plataformaNaoTile
     uniqueID: 4278199775
-    locked: 0
-  - name: props
-    uniqueID: 3579206503
     locked: 0
   - name: coletaveis
     uniqueID: 96130813

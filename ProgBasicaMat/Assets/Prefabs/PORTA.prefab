@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2854441825684758697}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -35.87, y: -3.44, z: 0.028251}
-  m_LocalScale: {x: 3.0951, y: 3.0951, z: 3.0951}
+  m_LocalScale: {x: 8.489132, y: 8.489132, z: 8.489132}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -120,3 +120,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   proximaCena: unificandoCaina 1
+  loading: {fileID: 8691967634671390891, guid: 67b139f71d8233d48b877c3a7b2d5201, type: 3}

@@ -5,61 +5,34 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: eb27294ce46eda24e9d2730591bb2154
   - enabled: 1
-    path: Assets/Scenes/unificandoCaina.unity
+    path: Assets/Scenes/Creditos.unity
+    guid: 4fab3ebe64112cd4fad58e13544590e8
+  - enabled: 1
+    path: Assets/Scenes/CutSceneInicial.unity
+    guid: 09001d68b8de2dd45ae96073afc2ba46
+  - enabled: 1
+    path: Assets/Scenes/fases/1fase.unity
     guid: d1f114c80a5072b42ba155a3995aa8c4
   - enabled: 1
-    path: Assets/Scenes/batatinha.unity
-    guid: fb7c508dbbed40e409fe327a97f4ccd8
-  - enabled: 1
-    path: Assets/Scenes/CabecaRola.unity
-    guid: 8e472a6733ac4cb42b1f17c5f052639d
-  - enabled: 1
-    path: Assets/Scenes/dash.unity
-    guid: 5c880170a093cc747bbda919b999d4b6
-  - enabled: 1
-    path: Assets/Scenes/executorCaina.unity
-    guid: ae4441ff1100d9c438f63d8047d0745d
-  - enabled: 1
-    path: Assets/Scenes/fase.unity
-    guid: 929f688877280f045936f1500296964f
-  - enabled: 1
-    path: Assets/Scenes/PersonagemMove.unity
-    guid: 81e2693b5ad1618499f170769928263d
-  - enabled: 1
-    path: Assets/Scenes/PersonagemMoveAndre.unity
-    guid: a9907764a25c6854a8cdd8b285678f61
-  - enabled: 1
-    path: Assets/Scenes/TutorialCSharp.unity
-    guid: 665ac9125a9d01a46883bd2fe93000f8
-  - enabled: 1
-    path: Assets/Scenes/unificandoCaina 1.unity
+    path: Assets/Scenes/fases/2platMovel.unity
     guid: 28d90f0445d706f4da857f2966297f28
   - enabled: 1
-    path: Assets/Scenes/unificandoCaina 2.unity
-    guid: b49c6bc70102936499428c202686368b
+    path: Assets/Scenes/fases/3tronco.unity
+    guid: 929f688877280f045936f1500296964f
   - enabled: 1
-    path: Assets/Scenes/unificandoCaina 3.unity
+    path: Assets/Scenes/fases/4humanos.unity
     guid: 7b26e64e16a1df4479a0cc8a425daa30
   - enabled: 1
-    path: Assets/Scenes/unificandoCaina 4.unity
-    guid: 4f662214baddc2c4db0c5b155c122285
+    path: Assets/Scenes/fases/5encontre.unity
+    guid: b49c6bc70102936499428c202686368b
   - enabled: 1
-    path: Assets/Scenes/unificandoLara.unity
-    guid: 4b039312a7f2b3f48b89ad1feb9f642c
+    path: Assets/Scenes/CutSceneFinal.unity
+    guid: b98b3d1e27b3f1b468687e768162f0ef
   - enabled: 1
-    path: Assets/Scenes/unificandoLuis.unity
-    guid: 89f4bbfe1be5d0a4c9b492e8aa96cfa6
-  - enabled: 1
-    path: Assets/Scenes/unificandoPedro.unity
-    guid: df92c878af802374fb919e9233e3194e
-  - enabled: 1
-    path: Assets/Scenes/unificandoRodrigues.unity
-    guid: 2b9ca4d5a40e20149a84b6bcf390f26d
+    path: Assets/Scenes/unificandoCaina.unity
+    guid: d0e5cbcc758f0284585227122796d5bc
   m_configObjects: {}

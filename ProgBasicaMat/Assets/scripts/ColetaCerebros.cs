@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ColetaCerebros : MonoBehaviour {
     public static ColetaCerebros coletor;
-    static int qtdAoNascer;
+    public static int qtdAoNascer;
     int qtdAtual;
     [SerializeField] Text contadorHUD;
 
@@ -23,6 +23,9 @@ public class ColetaCerebros : MonoBehaviour {
         }
     }
 
+    private void OnCollisionEnter2D (Collision2D col){
+        OnTriggerEnter2D(col.collider);
+    }
     private void OnTriggerEnter2D (Collider2D col) {
         if (col.tag == "cerebro") {
             qtdAtual += 1;

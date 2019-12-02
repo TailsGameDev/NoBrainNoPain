@@ -288,6 +288,7 @@ GameObject:
   - component: {fileID: 1456506332}
   - component: {fileID: 1456506331}
   - component: {fileID: 1456506330}
+  - component: {fileID: 1456506333}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -359,6 +360,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1456506333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456506329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0899a754249a6ab458247303e60b9cbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomBtn: {fileID: 0}
+  loading: {fileID: 8691967634671390891, guid: 67b139f71d8233d48b877c3a7b2d5201, type: 3}
 --- !u!1 &1555474977
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,6 +386,7 @@ GameObject:
   - component: {fileID: 1555474981}
   - component: {fileID: 1555474980}
   - component: {fileID: 1555474979}
+  - component: {fileID: 1555474982}
   m_Layer: 5
   m_Name: CutSceneInicial
   m_TagString: Untagged
@@ -453,3 +469,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1555474977}
   m_CullTransparentMesh: 0
+--- !u!114 &1555474982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555474977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18c6a19271d2c44396cb73142c1a7b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 1456506333}
+  nextScene: 1fase
