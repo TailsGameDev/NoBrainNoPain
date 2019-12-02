@@ -124,6 +124,8 @@ GameObject:
   - component: {fileID: 894051241}
   - component: {fileID: 894051240}
   - component: {fileID: 894051239}
+  - component: {fileID: 894051242}
+  - component: {fileID: 894051243}
   m_Layer: 5
   m_Name: CutSceneFinal
   m_TagString: Untagged
@@ -206,6 +208,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 894051237}
   m_CullTransparentMesh: 0
+--- !u!114 &894051242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894051237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18c6a19271d2c44396cb73142c1a7b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 894051243}
+  nextScene: Creditos
+--- !u!114 &894051243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894051237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0899a754249a6ab458247303e60b9cbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomBtn: {fileID: 0}
+  loading: {fileID: 8691967634671390891, guid: 67b139f71d8233d48b877c3a7b2d5201, type: 3}
 --- !u!1 &1731557187
 GameObject:
   m_ObjectHideFlags: 0
