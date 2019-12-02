@@ -10,6 +10,7 @@ public class Menu : MonoBehaviour
     [SerializeField] GameObject loading;
     public void GoToScene(string name)
     {
+        Comprou.joelho = 0;
         Instantiate(loading);
         SceneManager.LoadSceneAsync(name);
     }

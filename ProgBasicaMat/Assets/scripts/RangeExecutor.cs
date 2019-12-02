@@ -27,7 +27,11 @@ public class RangeExecutor : MonoBehaviour
     }
 
     void InstanciaDadano(){
+        Invoke("ScreenShake", 0.2f);
         Instantiate(dadanoExecutor, transform.position, Quaternion.identity);
+    }
+    void ScreenShake(){
+        Camera.main.GetComponent<ScreenShake>().Shake();
     }
     void FimAtaque(){
         atacando = false;

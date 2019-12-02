@@ -48,4 +48,23 @@ public class PlayerAnim : MonoBehaviour
 
     }
 
+
+    void OnTriggerEnter2D(Collider2D col){
+        if (col.tag == "chao"){
+            if (col.transform.position.x > transform.position.x){
+                animator.SetBool("agarradoEsq", true);
+            } else {
+                animator.SetBool("agarradoEsq", true);
+            }
+        }
+    }
+    void OnTriggerExit2D(Collider2D col){
+        if (col.tag == "chao"){
+            if (col.transform.position.x > transform.position.x){
+                animator.SetBool("agarradoEsq", false);
+            } else {
+                animator.SetBool("agarradoEsq", false);
+            }
+        }
+    }
 }
