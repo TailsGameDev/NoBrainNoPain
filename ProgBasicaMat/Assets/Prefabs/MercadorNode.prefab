@@ -500,8 +500,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 103, y: -15}
-  m_SizeDelta: {x: 117.2, y: 31.345001}
+  m_AnchoredPosition: {x: 122, y: -15}
+  m_SizeDelta: {x: 120.63, y: 31.345001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7771259764020727288
 CanvasRenderer:
@@ -544,7 +544,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: B$10
+  m_Text: B$7
 --- !u!1 &6540513702986630092
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,7 +700,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
+          m_IntArgument: 7
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

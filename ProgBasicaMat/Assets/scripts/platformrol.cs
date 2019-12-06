@@ -17,7 +17,7 @@ public class platformrol : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         
 		if(transform.position == pos1.position)
@@ -28,7 +28,7 @@ public class platformrol : MonoBehaviour
 		{
 			nextPos = pos1.position;
 		}		
-		transform.position = Vector3.MoveTowards(transform.position, nextPos, speed + Time.deltaTime);
+		transform.position = Vector3.MoveTowards(transform.position, nextPos, speed*Time.deltaTime);
     }
 	
 	private void OrDrawnGizmos()
