@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
         }
 
         corpo.velocity = new Vector2(horiDirect * speed, corpo.velocity.y);
-        if (Input.GetKeyDown(KeyCode.W) && podePular)
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && podePular)
         {
             corpo.velocity = new Vector2(corpo.velocity.x, forcaPulo);
             podePular = false;
