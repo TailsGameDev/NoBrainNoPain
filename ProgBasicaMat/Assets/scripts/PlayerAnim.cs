@@ -41,7 +41,7 @@ public class PlayerAnim : MonoBehaviour
         }
         animator.SetBool("pulo", ! player.podePular);
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("z"))
         {
             animator.SetTrigger("Mordida");
         }

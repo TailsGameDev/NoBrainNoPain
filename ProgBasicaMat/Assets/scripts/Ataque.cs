@@ -46,7 +46,7 @@ public class Ataque : MonoBehaviour
     private void Update () {
       
         
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) || Input.GetKeyDown("x"))
         {
 
             if (vomitoAtual > 99) {
@@ -56,7 +56,7 @@ public class Ataque : MonoBehaviour
             
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("z"))
         {
             GameObject Mordida = Instantiate(mordida, Boca.transform.position, Boca.transform.rotation);
         }

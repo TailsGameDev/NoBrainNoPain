@@ -8,6 +8,7 @@ public abstract class Compravel : MonoBehaviour
 {
     [SerializeField] Text precoText;
     [SerializeField] protected int qtdLimite = 1;
+    [SerializeField] Image tutorial;
 
     public void OnComprado (int preco) {
         // deu eh true se o player tinha cerebros suficientes
@@ -15,6 +16,9 @@ public abstract class Compravel : MonoBehaviour
 
         if (deu) {
             Efeito();
+            if (tutorial != null) {
+                tutorial.gameObject.SetActive(true);
+            }
             gameObject.SetActive(false);
         } else
         {
