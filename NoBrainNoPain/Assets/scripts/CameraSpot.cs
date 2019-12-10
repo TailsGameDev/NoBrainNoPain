@@ -21,7 +21,9 @@ public class CameraSpot : MonoBehaviour
     }
 
     public void SejaMinhaCamera () {
-        StartCoroutine(VemCamera());
+        if(maincamera.GetComponent<CameraAgarra>() == null){ //se tem componente, camera segue sempre
+            StartCoroutine(VemCamera());
+        }
     }
 
     IEnumerator VemCamera () {

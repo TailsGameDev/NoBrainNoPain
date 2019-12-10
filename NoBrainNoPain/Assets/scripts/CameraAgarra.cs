@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraAgarra : MonoBehaviour
 {
+    bool seguindo = false;
     void OnTriggerEnter2D(Collider2D col){
         if (col.tag == "Player"){
             transform.position = col.transform.position + new Vector3(0,0,-5);
@@ -11,6 +12,15 @@ public class CameraAgarra : MonoBehaviour
             StartCoroutine(segue(col));
         }
     }
+
+/*
+    void OnTriggerStay2D(Collider2D col){
+        if (!seguindo && col.tag == "Player"){
+            seguindo = true;
+            OnTriggerEnter2D(col);
+        }
+    }
+    */
 
     IEnumerator segue(Collider2D col){
         while(true){

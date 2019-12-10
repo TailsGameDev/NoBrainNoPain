@@ -5,15 +5,18 @@ using UnityEngine;
 public class PortaFechada : MonoBehaviour
 {
     public GameObject chave;
+    public GameObject portaAberta;
     public float delay;
     
-    void OnCollisionEnter2D(Collision2D col){
-        if (ChaveColetavel.pegou == false){
-            Pisca();
-        } else {
-            Destroy(gameObject);
+    void OnTriggerEnter2D(Collider2D col){
+        if (col.tag == "Player"){
+            if (ChaveColetavel.pegou == false){
+                Pisca();
+            } else {
+                portaAberta.SetActive(true);
+                Destroy(gameObject);
+            }
         }
-        
     }
     public void Pisca(){
         StartCoroutine(pisca());
