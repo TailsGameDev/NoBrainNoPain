@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class tomadano : MonoBehaviour
 {
-	[SerializeField] ParticleSystem particleSystem;
+	[SerializeField] ParticleSystem particles;
     public string identificador;
 	public float vidaMaxima;
     [SerializeField] protected float vida;
@@ -19,8 +19,8 @@ public class tomadano : MonoBehaviour
 	}
 	
 	public virtual void SomaAVida(float qtd){
-		if (qtd < 0 && particleSystem != null){
-			particleSystem.Play();
+		if (qtd < 0 && particles != null){
+			particles.Play();
 		}
 		
 		vida += qtd;

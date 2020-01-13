@@ -19,7 +19,7 @@ public class CompravelPe : Compravel
         int pesQtdd = Comprou.pes;
         while (pesQtdd > 0)
         {
-            playerPlayer.speed += 1;
+            playerPlayer.IncreaseSpeed(1);
             pesQtdd -= 1;
         }
     }

@@ -79,8 +79,7 @@ public class Inimigo : MonoBehaviour
 
     protected void CriaEstocada()
     {
-        GameObject Estocada = Instantiate(estocada, pontaDaLanca.transform.position, pontaDaLanca.transform.rotation);
-       
+        Instantiate(estocada, pontaDaLanca.transform.position, pontaDaLanca.transform.rotation);
     }
 
     protected  void setBoolFalse()

@@ -145,7 +145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94efa5bd8e249549a9b4c8fb30b8e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 7150298708759840032}
+  forcaPulo: 7
 --- !u!61 &1311584829
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -386,6 +387,7 @@ GameObject:
   - component: {fileID: 80114947}
   - component: {fileID: 7281760574499637476}
   - component: {fileID: 4493463867233594351}
+  - component: {fileID: 6136542322411296781}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -445,13 +447,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2f4ce20c3b8f5c4cb9da2189036e0e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  podePular: 1
   speed: 5
   horiDirect: 0
   VerDirect: 0
-  forcaPulo: 7
-  forcaInicialDash: 9
-  dandoDash: 0
 --- !u!114 &7150298708759840061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -530,6 +528,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0397b14e502dcd541ac83141ba2a1276, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6136542322411296781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7150298708759840035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb9a08a4a40bee7448c9bf931aafb1a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeEmModulo: 10
+  duracao: 0.5
 --- !u!1 &7322976861189160312
 GameObject:
   m_ObjectHideFlags: 0
@@ -5235,11 +5247,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 884943158}
     m_Modifications:
-    - target: {fileID: 1426565834387505817, guid: e808786acd6b1f44a8b4c31d5e77bc49,
-        type: 3}
-      propertyPath: m_Name
-      value: cerebrosHUD
-      objectReference: {fileID: 0}
     - target: {fileID: 1426565834387505816, guid: e808786acd6b1f44a8b4c31d5e77bc49,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5360,6 +5367,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.77107
       objectReference: {fileID: 0}
+    - target: {fileID: 1426565834387505817, guid: e808786acd6b1f44a8b4c31d5e77bc49,
+        type: 3}
+      propertyPath: m_Name
+      value: cerebrosHUD
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e808786acd6b1f44a8b4c31d5e77bc49, type: 3}
 --- !u!224 &4634379903457301929 stripped
@@ -5375,16 +5387,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 884943158}
     m_Modifications:
-    - target: {fileID: 4018519155070711619, guid: dee758cb9fb29fc45ab30fbc6131a45a,
-        type: 3}
-      propertyPath: m_Name
-      value: barraDeVomito
-      objectReference: {fileID: 0}
-    - target: {fileID: 4018519154161389401, guid: dee758cb9fb29fc45ab30fbc6131a45a,
-        type: 3}
-      propertyPath: sangue
-      value: 
-      objectReference: {fileID: 7230551226024956448}
     - target: {fileID: 4018519155070711618, guid: dee758cb9fb29fc45ab30fbc6131a45a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5505,6 +5507,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.40723714
       objectReference: {fileID: 0}
+    - target: {fileID: 4018519155070711619, guid: dee758cb9fb29fc45ab30fbc6131a45a,
+        type: 3}
+      propertyPath: m_Name
+      value: barraDeVomito
+      objectReference: {fileID: 0}
     - target: {fileID: 4018519154161389403, guid: dee758cb9fb29fc45ab30fbc6131a45a,
         type: 3}
       propertyPath: m_Color.r
@@ -5525,6 +5532,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: barraVomito
       objectReference: {fileID: 0}
+    - target: {fileID: 4018519154161389401, guid: dee758cb9fb29fc45ab30fbc6131a45a,
+        type: 3}
+      propertyPath: sangue
+      value: 
+      objectReference: {fileID: 7230551226024956448}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dee758cb9fb29fc45ab30fbc6131a45a, type: 3}
 --- !u!224 &7230551225103067705 stripped
@@ -5564,16 +5576,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 884943158}
     m_Modifications:
-    - target: {fileID: 4018519155070711619, guid: dee758cb9fb29fc45ab30fbc6131a45a,
-        type: 3}
-      propertyPath: m_Name
-      value: barraDeVida
-      objectReference: {fileID: 0}
-    - target: {fileID: 4018519154161389401, guid: dee758cb9fb29fc45ab30fbc6131a45a,
-        type: 3}
-      propertyPath: sangue
-      value: 
-      objectReference: {fileID: 7230551225425898272}
     - target: {fileID: 4018519155070711618, guid: dee758cb9fb29fc45ab30fbc6131a45a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5694,11 +5696,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.51702
       objectReference: {fileID: 0}
+    - target: {fileID: 4018519155070711619, guid: dee758cb9fb29fc45ab30fbc6131a45a,
+        type: 3}
+      propertyPath: m_Name
+      value: barraDeVida
+      objectReference: {fileID: 0}
     - target: {fileID: 4018519154757784795, guid: dee758cb9fb29fc45ab30fbc6131a45a,
         type: 3}
       propertyPath: m_TagString
       value: fundoVidaPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 4018519154161389401, guid: dee758cb9fb29fc45ab30fbc6131a45a,
+        type: 3}
+      propertyPath: sangue
+      value: 
+      objectReference: {fileID: 7230551225425898272}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dee758cb9fb29fc45ab30fbc6131a45a, type: 3}
 --- !u!224 &7230551224493642553 stripped

@@ -3,7 +3,8 @@ using UnityEngine;
 
 class ExecutorCaina : MonoBehaviour {
 
-    [SerializeField] Transform limiteEsq, limiteDir;
+    [SerializeField] Transform limiteEsq;
+    [SerializeField] Transform limiteDir;
 
     [SerializeField] float velOriginal, velAtual;
 

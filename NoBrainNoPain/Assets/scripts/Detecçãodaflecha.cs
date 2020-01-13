@@ -5,7 +5,6 @@ using UnityEngine;
 public class Detecçãodaflecha : MonoBehaviour
 {
 
-    bool teveColisao;
     public GameObject flecha;
     public Transform spawn;
     public Animator anim;
@@ -19,7 +18,6 @@ public class Detecçãodaflecha : MonoBehaviour
     {
         if (col.tag == "Player")
         {
-            teveColisao = true;
             anim.SetTrigger("atirou");
 
             Invoke("atira",0.5f);

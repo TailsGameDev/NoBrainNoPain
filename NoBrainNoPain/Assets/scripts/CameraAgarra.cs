@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CameraAgarra : MonoBehaviour
 {
-    bool seguindo = false;
     void OnTriggerEnter2D(Collider2D col){
         if (col.tag == "Player"){
             transform.position = col.transform.position + new Vector3(0,0,-5);

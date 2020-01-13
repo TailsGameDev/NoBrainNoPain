@@ -5,7 +5,6 @@ using UnityEngine;
 public class CameraSpot : MonoBehaviour
 {
     Camera maincamera;
-    static bool trocando = false;
 
     private void Start () {
         if(maincamera == null) {
@@ -27,15 +26,13 @@ public class CameraSpot : MonoBehaviour
     }
 
     IEnumerator VemCamera () {
-        trocando = true;
-            float delay = .3f;
-            float t = 0;
-            while (t < delay) {
-                t += Time.deltaTime;
-                maincamera.transform.position = Vector3.Lerp(maincamera.transform.position , transform.position , t);
-                yield return null;
-            }
-            maincamera.transform.position = transform.position;
-        trocando = false;
+        float delay = .3f;
+        float t = 0;
+        while (t < delay) {
+            t += Time.deltaTime;
+            maincamera.transform.position = Vector3.Lerp(maincamera.transform.position , transform.position , t);
+            yield return null;
+        }
+        maincamera.transform.position = transform.position;
     }
 }

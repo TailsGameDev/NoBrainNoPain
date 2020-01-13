@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DanoMili : dadano
 {
-    float addvomito = 20f; // soh eh usado se for uma mordida
     Ataque atk;
 
     private void Awake()

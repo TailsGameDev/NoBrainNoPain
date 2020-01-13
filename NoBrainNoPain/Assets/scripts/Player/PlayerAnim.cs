@@ -7,6 +7,8 @@ public class PlayerAnim : MonoBehaviour
     Animator animator;
     public Transform objParaGirar;
     [SerializeField] Player player;
+    PehPlayer pehPlayer;
+    DashPlayer dashPlayer;
 
     // Start is called before the first frame update
     void Start()
@@ -19,12 +21,14 @@ public class PlayerAnim : MonoBehaviour
         {
             player = transform.parent.GetComponent<Player>();
         }
+        pehPlayer = player.GetComponentInChildren<PehPlayer>();
+        dashPlayer = player.GetComponent<DashPlayer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        animator.SetBool("dandoDash", player.dandoDash);
+        animator.SetBool("dandoDash", dashPlayer.GetDandoDash());
 
         float h = Input.GetAxis("Horizontal");
 
@@ -39,7 +43,7 @@ public class PlayerAnim : MonoBehaviour
         {
             objParaGirar.eulerAngles = new Vector3(0, 180, 0);
         }
-        animator.SetBool("pulo", ! player.podePular);
+        animator.SetBool("pulo", ! pehPlayer.GetPodePular());
 
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("z"))
         {

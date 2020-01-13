@@ -10,7 +10,7 @@ public class NewBehaviourScript : MonoBehaviour
     private void Update()
     {
         if (Input.GetMouseButtonDown(1)) {
-            GameObject Mordida = Instantiate(mordida, Boca.transform.position, Boca.transform.rotation);
+            Instantiate(mordida, Boca.transform.position, Boca.transform.rotation);
         }
     }
 }

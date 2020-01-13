@@ -50,7 +50,7 @@ public class Ataque : MonoBehaviour
         {
 
             if (vomitoAtual > 99) {
-                GameObject vomito = Instantiate(Vomito, Boca.transform.position, Boca.transform.rotation);
+                Instantiate(Vomito, Boca.transform.position, Boca.transform.rotation);
                 setVomitoAtual(0);
             }
             
@@ -58,7 +58,7 @@ public class Ataque : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("z"))
         {
-            GameObject Mordida = Instantiate(mordida, Boca.transform.position, Boca.transform.rotation);
+            Instantiate(mordida, Boca.transform.position, Boca.transform.rotation);
         }
 
     }

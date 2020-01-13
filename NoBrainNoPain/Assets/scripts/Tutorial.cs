@@ -102,7 +102,7 @@ public class Tutorial : MonoBehaviour
         int[] numeros = new int[999];
 
         // usa um elemento do vetor
-        print(numeros[2]);
+        print(numeros[2] + " " + meus5Numeros[0]);
 
         numeros[2] = 4; // modifica um elemento do vetor
         print(numeros[2]);

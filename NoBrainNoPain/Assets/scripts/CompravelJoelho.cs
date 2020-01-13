@@ -13,7 +13,7 @@ public class CompravelJoelho : Compravel
     }
     protected override void Efeito(){
         Comprou.joelho += 1;
-        Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        player.RestauraPulo();
+        PehPlayer pehPlayer = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PehPlayer>();
+        pehPlayer.RestauraPulo();
     }
 }
