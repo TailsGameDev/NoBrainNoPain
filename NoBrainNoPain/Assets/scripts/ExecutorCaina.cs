@@ -10,7 +10,7 @@ class ExecutorCaina : MonoBehaviour {
 
     [SerializeField] Rigidbody2D rb2d;
 
-    [SerializeField] Player player;
+    [SerializeField] PlayerWalk playerWalk;
 
     void Start(){
         velAtual = velOriginal;
@@ -24,10 +24,10 @@ class ExecutorCaina : MonoBehaviour {
     }
 
     void getPlayer(){
-        if ( player == null){
-            GameObject gop = GameObject.FindGameObjectWithTag("Player");
-            if (gop != null){
-                player = gop.GetComponent<Player>();
+        if ( playerWalk == null){
+            GameObject gameObjectPlayer = GameObject.FindGameObjectWithTag("Player");
+            if (gameObjectPlayer != null){
+                playerWalk = gameObjectPlayer.GetComponent<PlayerWalk>();
             }
         }
     }

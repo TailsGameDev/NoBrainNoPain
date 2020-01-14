@@ -6,12 +6,13 @@ using UnityEngine;
 // Talvez possa ser usada no futuro para fazer ataque de inimigos também.
 public class Ataque : MonoBehaviour
 {
-    public GameObject mordida;
-    public GameObject Vomito; //o vomito em si, que por si soh jah se move.
-    public GameObject Boca; //spawn point do vomito
-    bool podevomito;
+    [SerializeField] GameObject Boca; //spawn point do vomito
+    [SerializeField] GameObject mordida;
+    [SerializeField] GameObject Vomito; //o vomito em si, que por si soh jah se move.
     public float vomitoMaximo = 100f;
     [SerializeField] float vomitoAtual;
+    
+    bool podevomito;
     public vida barraVomito;
 
 
@@ -43,23 +44,15 @@ public class Ataque : MonoBehaviour
         }
     }
 
-    private void Update () {
-      
-        
-        if (Input.GetMouseButtonDown(1) || Input.GetKeyDown("x"))
-        {
-
-            if (vomitoAtual > 99) {
-                Instantiate(Vomito, Boca.transform.position, Boca.transform.rotation);
-                setVomitoAtual(0);
-            }
-            
+    public void TentarAtaqueRanged(){
+        if (vomitoAtual > 99) {
+            Instantiate(Vomito, Boca.transform.position, Boca.transform.rotation);
+            setVomitoAtual(0);
         }
-
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("z"))
-        {
-            Instantiate(mordida, Boca.transform.position, Boca.transform.rotation);
-        }
-
     }
+
+    public void TentarAtaqueMelee(){
+        Instantiate(mordida, Boca.transform.position, Boca.transform.rotation);
+    }
+
 }

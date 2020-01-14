@@ -15,11 +15,11 @@ public class CompravelPe : Compravel
     {
         Comprou.pes = Comprou.pes + 1;
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        Player playerPlayer = player.GetComponent<Player>();
+        PlayerWalk playerWalk = player.GetComponent<PlayerWalk>();
         int pesQtdd = Comprou.pes;
         while (pesQtdd > 0)
         {
-            playerPlayer.IncreaseSpeed(1);
+            playerWalk.IncreaseSpeed(1);
             pesQtdd -= 1;
         }
     }

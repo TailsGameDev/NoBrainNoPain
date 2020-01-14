@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlayerWalk : MonoBehaviour
 {
     [SerializeField] float speed;
 
@@ -13,13 +13,9 @@ public class Player : MonoBehaviour
         corpo = gameObject.GetComponent<Rigidbody2D>();
     }
 
-    void FixedUpdate()
+    public void Walk(float inputHorizontal)
     {
-
-        float inputHorizontal = Input.GetAxis("Horizontal");
-
         corpo.velocity = new Vector2(inputHorizontal * speed, corpo.velocity.y);
-
     }
 
     public void IncreaseSpeed(float amount){

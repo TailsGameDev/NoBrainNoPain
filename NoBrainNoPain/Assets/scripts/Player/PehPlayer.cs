@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PehPlayer : MonoBehaviour
 {
-    [SerializeField] Player player;
+    [SerializeField] PlayerWalk playerWalk;
     
     private bool podePular;
     [SerializeField] float forcaPulo;
@@ -17,7 +17,7 @@ public class PehPlayer : MonoBehaviour
 
         DesabilitaPuloSeNaoComprouJoelho();
 
-        corpo = player.GetComponent<Rigidbody2D>();
+        corpo = playerWalk.GetComponent<Rigidbody2D>();
     }
 
     void DesabilitaPuloSeNaoComprouJoelho(){
@@ -27,16 +27,11 @@ public class PehPlayer : MonoBehaviour
         }
     }
 
-    private void Update() {
-        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && podePular)
-        {
-            Pular();
+    public void TentarPular(){
+        if (podePular){
+            corpo.velocity = new Vector2(corpo.velocity.x, forcaPulo);
+            podePular = false;
         }
-    }
-
-    void Pular(){
-        corpo.velocity = new Vector2(corpo.velocity.x, forcaPulo);
-        podePular = false;
     }
 
     private void OnTriggerStay2D (Collider2D coll) {

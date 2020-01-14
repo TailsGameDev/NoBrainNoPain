@@ -17,29 +17,23 @@ public class DashPlayer : MonoBehaviour
         corpo = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown("space") && PodeDarDash())
-        {
-            Dash();
-        }
-    }
-
     bool PodeDarDash(){
         return Comprou.pes > 0 && (! dandoDash);
     }
 
-    void Dash()
+    public void TentarDash()
     {
-        InicializaDash();
-        StartCoroutine(DashLoop());
-        StartCoroutine(EncerraDashAoAcabar());
+        if (PodeDarDash()){
+            InicializaDash();
+            StartCoroutine(DashLoop());
+            StartCoroutine(EncerraDashAoAcabar());
+        }
     }
 
     void InicializaDash(){
         dandoDash = true;
         tempoAtual = 0;
-        velocidadeComSinal = CalcularVelocidadeComSinal();
+        CalcularVelocidadeComSinal();
     }
 
     IEnumerator DashLoop(){
@@ -56,14 +50,12 @@ public class DashPlayer : MonoBehaviour
         dandoDash = false;
     }
 
-    float CalcularVelocidadeComSinal(){
-        float velocidade;
+    void CalcularVelocidadeComSinal(){
         if (EstahOlhandoParaDireita()){
-            velocidade = velocidadeEmModulo;
+            velocidadeComSinal = velocidadeEmModulo;
         } else {
-            velocidade = -velocidadeEmModulo;
+            velocidadeComSinal = -velocidadeEmModulo;
         }
-        return velocidade;
     }
 
     bool EstahOlhandoParaDireita(){

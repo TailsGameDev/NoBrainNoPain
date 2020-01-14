@@ -4,71 +4,63 @@ using UnityEngine;
 
 public class PlayerAnim : MonoBehaviour
 {
-    Animator animator;
-    public Transform objParaGirar;
-    [SerializeField] Player player;
-    PehPlayer pehPlayer;
-    DashPlayer dashPlayer;
+    [SerializeField] Animator animator;
+    [SerializeField] Transform objParaGirar;
+    [SerializeField] PlayerWalk playerWalk;
+    [SerializeField] PehPlayer pehPlayer;
+    [SerializeField] DashPlayer dashPlayer;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        animator = GetComponent<Animator>();
-        if (objParaGirar == null) {
-            objParaGirar = transform.parent;
-        }
-        if (player == null)
-        {
-            player = transform.parent.GetComponent<Player>();
-        }
-        pehPlayer = player.GetComponentInChildren<PehPlayer>();
-        dashPlayer = player.GetComponent<DashPlayer>();
+    const bool AGARRAR = true;
+    const bool SOLTAR = false;
+
+    public void AnimaAoAndar(float inputHorizontal){
+        animator.SetFloat("HorizontalAxis", inputHorizontal);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        animator.SetBool("dandoDash", dashPlayer.GetDandoDash());
+    public void AnimaAtaqueMelee(){
+        animator.SetTrigger("ataqueMelee");
+    }
 
-        float h = Input.GetAxis("Horizontal");
-
-        animator.SetFloat("HorizontalAxis", h);
-
-        if (h > 0.1)
+    public void OlhaParaOLadoCerto(float inputHorizontal){
+        if (inputHorizontal > 0.1)
         {
             objParaGirar.eulerAngles = new Vector3(0, 0, 0);
         }
 
-        if (h < -0.1)
+        if (inputHorizontal < -0.1)
         {
             objParaGirar.eulerAngles = new Vector3(0, 180, 0);
         }
+    }
+
+    void Update()
+    {
         animator.SetBool("pulo", ! pehPlayer.GetPodePular());
-
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("z"))
-        {
-            animator.SetTrigger("Mordida");
-        }
-
+        
+        animator.SetBool("dandoDash", dashPlayer.GetDandoDash());
     }
 
-
-    void OnTriggerEnter2D(Collider2D col){
-        if (col.tag == "chao"){
-            if (col.transform.position.x > transform.position.x){
-                animator.SetBool("agarradoEsq", true);
-            } else {
-                animator.SetBool("agarradoEsq", true);
-            }
+    void OnTriggerEnter2D(Collider2D possivelParede){
+        if (EhParede(possivelParede)){
+            AgarraOuSoltaParede(possivelParede, AGARRAR);
         }
     }
-    void OnTriggerExit2D(Collider2D col){
-        if (col.tag == "chao"){
-            if (col.transform.position.x > transform.position.x){
-                animator.SetBool("agarradoEsq", false);
-            } else {
-                animator.SetBool("agarradoEsq", false);
-            }
+
+    void OnTriggerExit2D(Collider2D possivelParede){
+        if (EhParede(possivelParede)){
+            AgarraOuSoltaParede(possivelParede, SOLTAR);
+        }
+    }
+
+    bool EhParede(Collider2D possivelParede){
+        return possivelParede.tag == "chao";
+    }
+
+    void AgarraOuSoltaParede(Collider2D parede, bool EhParaAgarrar){
+        if (parede.transform.position.x > transform.position.x){
+            animator.SetBool("agarradoEsq", EhParaAgarrar);
+        } else {
+            animator.SetBool("agarradoEsq", EhParaAgarrar);
         }
     }
 }
