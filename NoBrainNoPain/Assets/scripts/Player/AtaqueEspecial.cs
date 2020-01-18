@@ -6,19 +6,20 @@ public class AtaqueEspecial : MonoBehaviour
 {
     [SerializeField] Ataque ataque;
 
-    [SerializeField] float porcentagem;
+    [SerializeField] float porcentagemDaBarrinha;
+    float porcentagemInicialDaBarrinha = 0;
     [SerializeField] BarraDeMedicaoDeRecurso barrinhaUI;
 
     void Start(){
-        barrinhaUI.SetPorcentagem(0);
+        barrinhaUI.SetPorcentagem(porcentagemInicialDaBarrinha);
     }
 
-    public void SetPorcentagem(float porcentagem)
+    public void SetPorcentagemDaBarrinha(float porcentagem)
     {
         if(DesbloqueouAtaqueEspecial())
         {
-            this.porcentagem = porcentagem;
-            barrinhaUI.SetPorcentagem(this.porcentagem);
+            this.porcentagemDaBarrinha = porcentagem;
+            barrinhaUI.SetPorcentagem(this.porcentagemDaBarrinha);
         }
     }
 
@@ -27,16 +28,16 @@ public class AtaqueEspecial : MonoBehaviour
     }
 
     public void TentarAtaqueEspecial(){
-        if (porcentagem > 99) {
-            
+        if (porcentagemDaBarrinha > 99) {
+
             ataque.Atacar();
 
             barrinhaUI.SetPorcentagem(0);
         }
     }
 
-    public float GetPorcentagem()
+    public float GetPorcentagemDaBarrinha()
     {
-        return this.porcentagem;
+        return this.porcentagemDaBarrinha;
     }
 }

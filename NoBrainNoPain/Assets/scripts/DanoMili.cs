@@ -23,9 +23,10 @@ public class DanoMili : dadano
         if (tag == "mordida"){
             if (col.tag == "Inimigo")
             {
-                if (atkEspecial.GetPorcentagem() < 99)
+                float porcentagemAtual = atkEspecial.GetPorcentagemDaBarrinha();
+                if (porcentagemAtual < 99)
                 {
-                    atkEspecial.SetPorcentagem(atkEspecial.GetPorcentagem() + 20);
+                    atkEspecial.SetPorcentagemDaBarrinha(porcentagemAtual + 20);
                 }
             }
         }
