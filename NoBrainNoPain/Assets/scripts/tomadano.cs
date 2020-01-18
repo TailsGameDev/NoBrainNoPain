@@ -8,13 +8,13 @@ public class tomadano : MonoBehaviour
     public string identificador;
 	public float vidaMaxima;
     [SerializeField] protected float vida;
-	public vida barraDeVida;
+	public BarraDeMedicaoDeRecurso barraDeVida;
     [SerializeField] GameObject criaAoMorrer;
 
 	protected virtual void Start(){
 		vida = vidaMaxima;
 		if (barraDeVida != null){
-			barraDeVida.VidaCheia = vidaMaxima;
+			barraDeVida.maximoDeRecurso = vidaMaxima;
 		}
 	}
 	
@@ -30,7 +30,7 @@ public class tomadano : MonoBehaviour
         }
 
 		if (barraDeVida != null){
-			barraDeVida.VidaDoPersonagem = vida;
+			barraDeVida.SetPorcentagem(vida);
 		}
 		
 		if ( vida <=0 ){

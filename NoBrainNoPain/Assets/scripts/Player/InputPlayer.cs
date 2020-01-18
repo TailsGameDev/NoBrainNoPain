@@ -8,6 +8,7 @@ public class InputPlayer : MonoBehaviour
     [SerializeField] DashPlayer dashPlayer;
     [SerializeField] PehPlayer pehPlayer;
     [SerializeField] Ataque ataque;
+    [SerializeField] AtaqueEspecial ataqueEspecial;
     [SerializeField] PlayerAnim playerAnim;
 
     float inputHorizontal;
@@ -19,8 +20,8 @@ public class InputPlayer : MonoBehaviour
         GerenciarPulo();
         GerenciarDash();
         GerenciarAnimacao();
-        GerenciarAtqMelee();
-        GerenciarAtqRanged();
+        GerenciarAtaque();
+        GerenciarAtaqueEspecial();
     }
 
     void GerenciarMovimento(){
@@ -42,26 +43,26 @@ public class InputPlayer : MonoBehaviour
     void GerenciarAnimacao(){
         playerAnim.AnimaAoAndar(inputHorizontal);
         playerAnim.OlhaParaOLadoCerto(inputHorizontal);
-        if (QuerAtacarMelee())
+        if (InputAtaqueSimples())
         {
             playerAnim.AnimaAtaqueMelee();
         }
     }
 
-    void GerenciarAtqMelee(){
-        if (QuerAtacarMelee())
+    void GerenciarAtaque(){
+        if (InputAtaqueSimples())
         {
-            ataque.TentarAtaqueMelee();
+            ataque.Atacar();
         }
     }
 
-    void GerenciarAtqRanged(){
+    void GerenciarAtaqueEspecial(){
         if (Input.GetMouseButtonDown(1) || Input.GetKeyDown("x")){
-            ataque.TentarAtaqueRanged();
+            ataqueEspecial.TentarAtaqueEspecial();
         }
     }
 
-    bool QuerAtacarMelee(){
+    bool InputAtaqueSimples(){
         return Input.GetMouseButtonDown(0) || Input.GetKeyDown("z");
     }
 }

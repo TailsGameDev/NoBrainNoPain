@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4018519154161389404}
   - component: {fileID: 4018519154161389402}
   - component: {fileID: 4018519154161389403}
-  - component: {fileID: 4018519154161389401}
+  - component: {fileID: 6081325424359568641}
   m_Layer: 5
   m_Name: sangue
   m_TagString: barraVidaPlayer
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &4018519154161389401
+--- !u!114 &6081325424359568641
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -84,10 +84,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4018519154161389405}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12a75052242b1a14384680a86a9d45ab, type: 3}
+  m_Script: {fileID: 11500000, guid: c192249ee3adbbc4981f617ef8d5922d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VidaDoPersonagem: 0
+  VidaDoPersonagem: 100
   sangue: {fileID: 4018519154161389403}
   VidaCheia: 100
   aumentado: 0

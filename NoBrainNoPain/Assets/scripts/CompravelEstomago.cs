@@ -13,8 +13,8 @@ public class CompravelEstomago : Compravel
     }
     protected override void Efeito()
     {
-        Ataque playerAtk = GameObject.FindGameObjectWithTag("Player").GetComponent<Ataque>();
+        AtaqueEspecial playerAtk = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<AtaqueEspecial>();
         Comprou.estamagos = Comprou.estamagos + 1;
-        playerAtk.setVomitoAtual(100);
+        playerAtk.SetPorcentagem(100);
     }
 }

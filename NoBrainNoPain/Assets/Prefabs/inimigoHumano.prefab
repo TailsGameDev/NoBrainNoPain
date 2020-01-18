@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e86bebb985595d43b650900f9e1ed92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleSystem: {fileID: 7121405530696805655}
+  particles: {fileID: 7121405530696805655}
   identificador: humano
   vidaMaxima: 50
   vida: 0

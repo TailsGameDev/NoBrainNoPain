@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class DanoMili : dadano
 {
-    Ataque atk;
+    AtaqueEspecial atkEspecial;
 
     private void Awake()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (tag == "mordida")
         {
-            atk = player.GetComponent<Ataque>();
+            atkEspecial = player.GetComponentInChildren<AtaqueEspecial>();
         }
     }
 
@@ -23,9 +23,9 @@ public class DanoMili : dadano
         if (tag == "mordida"){
             if (col.tag == "Inimigo")
             {
-                if (atk.getVomitoAtual() < 99)
+                if (atkEspecial.GetPorcentagem() < 99)
                 {
-                    atk.setVomitoAtual(atk.getVomitoAtual() + 20);
+                    atkEspecial.SetPorcentagem(atkEspecial.GetPorcentagem() + 20);
                 }
             }
         }

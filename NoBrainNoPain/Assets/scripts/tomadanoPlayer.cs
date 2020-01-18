@@ -7,24 +7,24 @@ public class tomadanoPlayer : tomadano
     private void Awake () {
         if (barraDeVida == null) {
             if (GameObject.FindGameObjectWithTag("barraVidaPlayer") != null) {
-                barraDeVida = GameObject.FindGameObjectWithTag("barraVidaPlayer").GetComponent<vida>();
+                barraDeVida = GameObject.FindGameObjectWithTag("barraVidaPlayer").GetComponent<BarraDeMedicaoDeRecurso>();
             }
         }
     }
 
     public void ConfiguraVida () {
-        barraDeVida.VidaCheia = vidaMaxima;
+        barraDeVida.maximoDeRecurso = vidaMaxima;
         int coracoesComprados = Comprou.coracoes;
         while (coracoesComprados > 0) {
             coracoesComprados = coracoesComprados - 1;
             vidaMaxima = vidaMaxima * 1.25f;
-            barraDeVida.VidaCheia = vidaMaxima;
-            barraDeVida.aumentado = true;
+            barraDeVida.maximoDeRecurso = vidaMaxima;
+            barraDeVida.AplicarMelhoria();
         }
     }
 
     private void Update () {
-        barraDeVida.VidaDoPersonagem = vida;
+        barraDeVida.SetPorcentagem(vida);
     }
 
     protected override void Start()
