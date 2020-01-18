@@ -13,9 +13,6 @@ public class tomadano : MonoBehaviour
 
 	protected virtual void Start(){
 		vida = vidaMaxima;
-		if (barraDeVida != null){
-			barraDeVida.maximoDeRecurso = vidaMaxima;
-		}
 	}
 	
 	public virtual void SomaAVida(float qtd){
@@ -30,7 +27,8 @@ public class tomadano : MonoBehaviour
         }
 
 		if (barraDeVida != null){
-			barraDeVida.SetPorcentagem(vida);
+			float porcentagemVida = 100*vida/vidaMaxima;
+			barraDeVida.SetPorcentagem(porcentagemVida);
 		}
 		
 		if ( vida <=0 ){

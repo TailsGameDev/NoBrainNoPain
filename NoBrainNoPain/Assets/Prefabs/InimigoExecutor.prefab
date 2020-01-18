@@ -5107,7 +5107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e86bebb985595d43b650900f9e1ed92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleSystem: {fileID: 7287403411621060355}
+  particles: {fileID: 7287403411621060355}
   identificador: 1.4865
   vidaMaxima: 500
   vida: 0
@@ -5131,4 +5131,4 @@ MonoBehaviour:
   velOriginal: 2
   velAtual: 2
   rb2d: {fileID: 6767142556848352080}
-  player: {fileID: 0}
+  playerWalk: {fileID: 0}

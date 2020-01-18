@@ -13,18 +13,12 @@ public class tomadanoPlayer : tomadano
     }
 
     public void ConfiguraVida () {
-        barraDeVida.maximoDeRecurso = vidaMaxima;
         int coracoesComprados = Comprou.coracoes;
         while (coracoesComprados > 0) {
             coracoesComprados = coracoesComprados - 1;
             vidaMaxima = vidaMaxima * 1.25f;
-            barraDeVida.maximoDeRecurso = vidaMaxima;
             barraDeVida.AplicarMelhoria();
         }
-    }
-
-    private void Update () {
-        barraDeVida.SetPorcentagem(vida);
     }
 
     protected override void Start()

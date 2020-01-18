@@ -15,7 +15,15 @@ public class BarraDeMedicaoDeRecurso : MonoBehaviour{
 
 	public void AplicarMelhoria(){
 		larguraOriginalRecursoImg *= 1.25f;
+		AjustarTamanhoDoPai();
 		AjustarTamanho(100);
+	}
+
+	void AjustarTamanhoDoPai(){
+		RectTransform parentRect = recursoImg.transform.parent.GetComponent<RectTransform>();
+		Vector2 tamanhoAntigo = parentRect.sizeDelta;
+		Vector2 tamanhoNovo = new Vector2(tamanhoAntigo.x * 1.25f, tamanhoAntigo.y);
+		parentRect.sizeDelta = tamanhoNovo;
 	}
 
 	public void SetPorcentagem(float porcentagem){
